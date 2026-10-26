@@ -1,0 +1,246 @@
+/* ===================================================
+   Latteh Cafe - Premium Digital QR Menu Design System
+   =================================================== */
+
+:root {
+  /* Color Palette - Inspired by Specialty Coffee & Emerald Green Crest */
+  --primary: #0e3b2e;
+  --primary-light: #165643;
+  --primary-dark: #07241b;
+  --primary-glow: rgba(14, 59, 46, 0.25);
+
+  --accent-gold: #c99635;
+  --accent-gold-light: #dfb256;
+  --accent-gold-dark: #9e7323;
+  --gold-glow: rgba(201, 150, 53, 0.35);
+
+  --coffee-dark: #1e130c;
+  --coffee-bean: #2f1e14;
+  --coffee-roast: #4b3224;
+  --cream-soft: #fbf9f4;
+  --cream-card: #ffffff;
+  --cream-border: #ede6d6;
+
+  --text-primary: #1e1b18;
+  --text-secondary: #63584e;
+  --text-muted: #9c9187;
+  --text-inverse: #ffffff;
+
+  --badge-red: #c92a2a;
+  --badge-green: #2b8a3e;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 8px rgba(30, 19, 12, 0.05);
+  --shadow-md: 0 8px 24px rgba(30, 19, 12, 0.08);
+  --shadow-lg: 0 16px 40px rgba(30, 19, 12, 0.12);
+  --shadow-gold: 0 8px 25px rgba(201, 150, 53, 0.25);
+  --shadow-emerald: 0 8px 25px rgba(14, 59, 46, 0.3);
+
+  /* Fonts */
+  --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-en: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Mode Tokens */
+[data-theme='dark'] {
+  --cream-soft: #0e0c0a;
+  --cream-card: #181512;
+  --cream-border: #2c251f;
+  --coffee-dark: #0a0807;
+  --text-primary: #f5f2eb;
+  --text-secondary: #b5aba1;
+  --text-muted: #736b63;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-ar), var(--font-en);
+  background-color: var(--cream-soft);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+body[dir="ltr"] {
+  font-family: var(--font-en), var(--font-ar);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-dark);
+}
+
+/* Base Utility Classes */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+/* App Layout Wrapper */
+.latteh-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 90px; /* Space for sticky cart/bottom bar */
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 150, 53, 0.2);
+}
+
+[data-theme='dark'] .glass-panel {
+  background: rgba(24, 21, 18, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 150, 53, 0.25);
+}
+
+/* Golden Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 60%, var(--accent-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Emerald Pill / Badge */
+.emerald-badge {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(14, 59, 46, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(201, 150, 53, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(201, 150, 53, 0.7); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 7, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Toast Notification */
+.toast-alert {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--accent-gold);
+  z-index: 1100;
+  animation: fadeIn 0.25s ease-out;
+}
