@@ -1,0 +1,1 @@
+RedirectMatch 302 ^/(?i)latteh(/(index\.html)?)?$ /latteh/dist/
