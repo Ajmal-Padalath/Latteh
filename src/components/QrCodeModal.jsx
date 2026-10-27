@@ -80,7 +80,7 @@ export default function QrCodeModal({
         <div className="qr-generator-view">
           <div className="qr-stand-card" id="printable-qr-stand" ref={qrRef}>
             <div className="stand-card-header">
-              <img src="/logo.jpg" alt="Latteh Logo" className="stand-logo" />
+              <img src="./logo.jpg" alt="Latteh Logo" className="stand-logo" />
               <div className="stand-branding">
                 <h4 className="stand-title-ar">{RESTAURANT_INFO.nameAr}</h4>
                 <span className="stand-title-en">Latteh Cafe</span>
@@ -102,7 +102,7 @@ export default function QrCodeModal({
                   fgColor="#0e3b2e"
                   bgColor="#ffffff"
                   imageSettings={{
-                    src: "/logo.jpg",
+                    src: "./logo.jpg",
                     x: undefined,
                     y: undefined,
                     height: 42,
