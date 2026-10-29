@@ -1,10 +1,10 @@
 import React from 'react';
-import { 
-  QrCode, 
-  Moon, 
-  Sun, 
-  MapPin, 
-  Clock, 
+import {
+  QrCode,
+  Moon,
+  Sun,
+  MapPin,
+  Clock,
   Sparkles,
   Layers,
   Store
@@ -51,21 +51,21 @@ export default function Header({
 
           {/* Language Switcher */}
           <div className="lang-toggle-group">
-            <button 
+            <button
               className={`lang-btn ${lang === 'ar' ? 'active' : ''}`}
               onClick={() => setLang('ar')}
               title="العربية"
             >
               عربي
             </button>
-            <button 
+            <button
               className={`lang-btn ${lang === 'dual' ? 'active' : ''}`}
               onClick={() => setLang('dual')}
               title="عرض باللغتين معا"
             >
               عربي / EN
             </button>
-            <button 
+            <button
               className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
               onClick={() => setLang('en')}
               title="English"
@@ -75,8 +75,8 @@ export default function Header({
           </div>
 
           {/* Theme Toggle */}
-          <button 
-            className="icon-circle-btn" 
+          <button
+            className="icon-circle-btn"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             title={theme === 'dark' ? "وضع النهار" : "الوضع الداكن"}
           >
@@ -90,13 +90,13 @@ export default function Header({
         <div className="hero-background-overlay"></div>
         <div className="hero-content">
           <div className="logo-badge-container animate-float">
-            <img 
-              src="./latteh-logo.png" 
-              alt="Latteh Cafe Logo" 
+            <img
+              src="./logo.jpg"
+              alt="Latteh Cafe Logo"
               className="cafe-logo-img"
               onError={(e) => {
                 e.target.style.display = 'none';
-              }} 
+              }}
             />
           </div>
 
@@ -105,15 +105,15 @@ export default function Header({
               <Sparkles size={13} className="text-gold" />
               <span>{isAr ? "مقهى ومشروبات وحلويات فاخرة" : "Specialty Coffee & Beverages"}</span>
             </div>
-            
+
             <h1 className="cafe-title">
               <span className="arabic-name">لاتيه ليستر</span>
               <span className="english-name">Latteh</span>
             </h1>
 
             <p className="cafe-subtitle">
-              {isAr 
-                ? "امسح رمز الاستجابة السريعة QR لتصفح القائمة الكاملة والطلب مباشرة من هاتفك" 
+              {isAr
+                ? "امسح رمز الاستجابة السريعة QR لتصفح القائمة الكاملة والطلب مباشرة من هاتفك"
                 : "Scan the QR code to explore our full menu and order directly from your phone"}
             </p>
 
@@ -124,7 +124,7 @@ export default function Header({
                 <span>{isAr ? "رمز QR الخاص بالمنيو" : "Store Menu QR Code"}</span>
               </button>
 
-              <button 
+              <button
                 className={`secondary-action-btn ${viewMode === 'board' ? 'btn-active-gold' : ''}`}
                 onClick={() => setViewMode(viewMode === 'board' ? 'cards' : 'board')}
                 title={isAr ? "عرض لوحة المنيو الأصلية" : "Original Board View"}
