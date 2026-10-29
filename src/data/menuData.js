@@ -103,7 +103,8 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Sweet", "Signature"],
     descriptionEn: "Smooth espresso poured over silky steamed milk with sweetened condensed milk.",
     descriptionAr: "إسبريسو غني مع حليب مبخر ممزوج بالحليب المكثف المحلى بطريقة لاتيه ليستر الخاصة.",
-    image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&auto=format&fit=crop&q=80"
+    // image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&auto=format&fit=crop&q=80"
+    image: "./Spanish-Latte.PNG"
   },
   {
     id: "hc-2",
@@ -236,7 +237,8 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Foamy"],
     descriptionEn: "Classic balance of dark espresso, steamed milk, and thick airy foam.",
     descriptionAr: "توازن ثلاثي كلاسيكي بين الإسبريسو والحليب ورغوة كثيفة مع رشة كاكاو.",
-    image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&auto=format&fit=crop&q=80"
+    image: "./Cappuccino.PNG"
+    // image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&auto=format&fit=crop&q=80"
   },
   {
     id: "hc-13",
