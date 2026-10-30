@@ -102,7 +102,7 @@ export default function QrCodeModal({
                   fgColor="#0e3b2e"
                   bgColor="#ffffff"
                   imageSettings={{
-                    src: "./logo2.jpeg",
+                    src: "./qr-logo.PNG",
                     x: undefined,
                     y: undefined,
                     height: 42,
