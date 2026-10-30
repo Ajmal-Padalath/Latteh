@@ -1,7 +1,7 @@
 // Complete menu data extracted precisely from Latteh Cafe menu board
 
 export const RESTAURANT_INFO = {
-  nameEn: "Latteh Cafe",
+  nameEn: "Latteh Leicester",
   nameAr: "لاتيه ليستر",
   sloganEn: "Artisan Coffee & Specialty Beverages",
   sloganAr: "قهوة مختصة ومشروبات منعشة وحلويات فاخرة",
