@@ -10,7 +10,7 @@ export const RESTAURANT_INFO = {
   instagram: "@latteh_cafe",
   locationEn: "AL Qurayaat, Saudi Arabia",
   locationAr: "القريات، المملكة العربية السعودية",
-  openingHoursEn: "Open 24 HOURS",
+  openingHoursEn: "OPEN 24 HOURS",
   openingHoursAr: "مفتوح على مدار ٢٤ ساعة",
   currencyEn: "SAR",
   currencyAr: "ر.س",
