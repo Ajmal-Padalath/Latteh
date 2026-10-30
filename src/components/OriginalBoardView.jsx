@@ -59,7 +59,7 @@ export default function OriginalBoardView({
       <div className="board-intro-banner">
         <div className="board-badge">
           <Sparkles size={14} className="text-gold" />
-          <span>{isAr ? "عرض لوحة المنيو الأصلية لمقهى لاتيه ليستر" : "Latteh Cafe - Original Board Replica"}</span>
+          <span>{isAr ? "عرض لوحة المنيو الأصلية لمقهى لاتيه ليستر" : "Latteh Leicester - Original Board Replica"}</span>
         </div>
         <p className="board-instruction-text">
           {isAr 

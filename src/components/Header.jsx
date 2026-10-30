@@ -92,7 +92,7 @@ export default function Header({
           <div className="logo-badge-container animate-float">
             <img
               src="./logo2.jpeg"
-              alt="Latteh Cafe Logo"
+              alt="Latteh Leicester Logo"
               className="cafe-logo-img"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -108,7 +108,7 @@ export default function Header({
 
             <h1 className="cafe-title">
               <span className="arabic-name">لاتيه ليستر</span>
-              <span className="english-name">Latteh</span>
+              <span className="english-name">Latteh Leicester</span>
             </h1>
 
             <p className="cafe-subtitle">

@@ -83,7 +83,7 @@ export default function QrCodeModal({
               <img src="./logo2.jpeg" alt="Latteh Logo" className="stand-logo" />
               <div className="stand-branding">
                 <h4 className="stand-title-ar">{RESTAURANT_INFO.nameAr}</h4>
-                <span className="stand-title-en">Latteh Cafe</span>
+                <span className="stand-title-en">Latteh Leicester</span>
               </div>
             </div>
 

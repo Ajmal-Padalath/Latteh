@@ -47,7 +47,7 @@ export default function OrderSuccessModal({
         {/* Paper Receipt Simulation */}
         <div className="paper-receipt">
           <div className="paper-receipt-top">
-            <h4 className="receipt-brand">{RESTAURANT_INFO.nameAr} - Latteh Cafe</h4>
+            <h4 className="receipt-brand">{RESTAURANT_INFO.nameAr} - Latteh Leicester</h4>
             <div className="receipt-meta-row">
               <span><Store size={12} /> {isAr ? "استلام من الكاونتر" : "Counter Pick-up"}</span>
               <span><Clock size={12} /> {order.timestamp}</span>
