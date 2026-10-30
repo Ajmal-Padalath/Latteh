@@ -91,7 +91,7 @@ export default function Header({
         <div className="hero-content">
           <div className="logo-badge-container animate-float">
             <img
-              src="./logo2.JPEG"
+              src="./logo2.jpeg"
               alt="Latteh Cafe Logo"
               className="cafe-logo-img"
               onError={(e) => {
