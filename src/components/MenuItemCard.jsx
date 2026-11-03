@@ -10,6 +10,11 @@ export default function MenuItemCard({
 }) {
   const isAr = lang === 'ar';
   const isDual = lang === 'dual';
+  const hasSizes = item.categoryId === 'hot_coffee' || item.categoryId === 'tea' || (item.priceSmall != null && item.priceLarge != null && item.priceSmall !== item.priceLarge);
+
+  const displayCalories = item.caloriesSmall && item.caloriesLarge && item.caloriesSmall !== item.caloriesLarge
+    ? `${item.caloriesSmall}-${item.caloriesLarge}`
+    : (item.calories || item.caloriesSmall);
 
   return (
     <div className="menu-card" onClick={() => onSelectItem(item)}>
@@ -41,12 +46,17 @@ export default function MenuItemCard({
               <span>{isAr ? "الأكثر طلباً" : "Popular"}</span>
             </span>
           )}
+          {hasSizes && (
+            <span className="badge-sizes">
+              <span>{isAr ? "صغير / كبير" : "S / L"}</span>
+            </span>
+          )}
         </div>
 
         {/* Calorie Tag */}
-        {item.calories && (
+        {displayCalories && (
           <span className="badge-calories">
-            {item.calories} {isAr ? "سعرة" : "cal"}
+            {displayCalories} {isAr ? "سعرة" : "cal"}
           </span>
         )}
       </div>
@@ -80,9 +90,20 @@ export default function MenuItemCard({
 
         {/* Bottom Price & Add Action */}
         <div className="card-footer-row">
-          <div className="price-tag">
-            <span className="price-amount">{item.price}</span>
-            <span className="price-curr">{isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
+          <div className="price-tag-container">
+            <div className="price-tag">
+              <span className="price-amount">
+                {hasSizes
+                  ? `${item.priceSmall} - ${item.priceLarge}`
+                  : item.price}
+              </span>
+              <span className="price-curr">{isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
+            </div>
+            {hasSizes && (
+              <span className="price-size-sublabel">
+                {isAr ? "حجمين: صغير / كبير" : "2 Sizes: Small / Large"}
+              </span>
+            )}
           </div>
 
           <button 

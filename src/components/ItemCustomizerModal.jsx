@@ -11,6 +11,14 @@ export default function ItemCustomizerModal({
   const isAr = lang === 'ar';
   const isCold = item.categoryId === 'cold_drinks' || item.categoryId === 'cold_coffee' || item.categoryId === 'fresh_juices';
   const isBeverage = item.categoryId !== 'desserts';
+  const hasSizes = item.categoryId === 'hot_coffee' || item.categoryId === 'tea' || (item.priceSmall != null && item.priceLarge != null);
+
+  const [selectedSize, setSelectedSize] = useState(() => {
+    if (hasSizes) {
+      return 'small';
+    }
+    return null;
+  });
 
   const [quantity, setQuantity] = useState(1);
   const [selectedSugar, setSelectedSugar] = useState("normal");
@@ -20,6 +28,20 @@ export default function ItemCustomizerModal({
   const [specialNotes, setSpecialNotes] = useState("");
 
   if (!item) return null;
+
+  // Pricing based on selected size
+  const priceSmall = item.priceSmall != null ? item.priceSmall : item.price;
+  const priceLarge = item.priceLarge != null ? item.priceLarge : item.price;
+  const caloriesSmall = item.caloriesSmall != null ? item.caloriesSmall : item.calories;
+  const caloriesLarge = item.caloriesLarge != null ? item.caloriesLarge : item.calories;
+
+  const currentBasePrice = hasSizes 
+    ? (selectedSize === 'large' ? priceLarge : priceSmall)
+    : item.price;
+
+  const currentCalories = hasSizes
+    ? (selectedSize === 'large' ? caloriesLarge : caloriesSmall)
+    : (item.calories || item.caloriesSmall);
 
   // Toggle add-on
   const toggleAddOn = (addon) => {
@@ -34,13 +56,20 @@ export default function ItemCustomizerModal({
   const milkObj = CUSTOMIZATION_OPTIONS.milk.find(m => m.id === selectedMilk);
   const milkExtra = (isBeverage && milkObj) ? milkObj.price : 0;
   const addOnsExtra = selectedAddOns.reduce((sum, a) => sum + a.price, 0);
-  const unitPrice = item.price + milkExtra + addOnsExtra;
+  const unitPrice = currentBasePrice + milkExtra + addOnsExtra;
   const totalPrice = unitPrice * quantity;
 
   const handleConfirm = () => {
+    const sizeLabelAr = hasSizes ? (selectedSize === 'large' ? 'كبير' : 'صغير') : null;
+    const sizeLabelEn = hasSizes ? (selectedSize === 'large' ? 'Large' : 'Small') : null;
+
     const customizedItem = {
       ...item,
-      cartId: `${item.id}-${Date.now()}`,
+      cartId: `${item.id}-${selectedSize || 'standard'}-${Date.now()}`,
+      selectedSize: hasSizes ? selectedSize : null,
+      sizeLabelAr,
+      sizeLabelEn,
+      basePrice: currentBasePrice,
       quantity,
       selectedSugar: isBeverage ? selectedSugar : null,
       selectedMilk: isBeverage ? selectedMilk : null,
@@ -77,13 +106,68 @@ export default function ItemCustomizerModal({
           </p>
 
           <div className="customizer-badges-row">
-            <span className="info-chip">
-              {item.calories} {isAr ? "سعرة حرارية" : "calories"}
-            </span>
+            {currentCalories && (
+              <span className="info-chip">
+                {currentCalories} {isAr ? "سعرة حرارية" : "calories"}
+              </span>
+            )}
             <span className="price-chip-highlight">
-              {item.price} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+              {currentBasePrice} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
             </span>
           </div>
+
+          {/* Size Selection (for hot_coffee and tea) */}
+          {hasSizes && (
+            <div className="option-section size-selection-section">
+              <label className="section-title">
+                <Coffee size={15} className="text-gold" />
+                <span>{isAr ? "اختر الحجم" : "Select Size"}</span>
+              </label>
+              <div className="size-options-grid">
+                <button
+                  type="button"
+                  className={`size-card-btn ${selectedSize === 'small' ? 'active' : ''}`}
+                  onClick={() => setSelectedSize('small')}
+                >
+                  <div className="size-card-top">
+                    <div className="size-icon-badge size-sm">
+                      <Coffee size={16} />
+                    </div>
+                    <div className="size-label-group">
+                      <span className="size-name-main">{isAr ? "صغير" : "Small"}</span>
+                      {caloriesSmall && (
+                        <span className="size-cal-hint">{caloriesSmall} {isAr ? "سعرة" : "cal"}</span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="size-price-tag">
+                    {priceSmall} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  className={`size-card-btn ${selectedSize === 'large' ? 'active' : ''}`}
+                  onClick={() => setSelectedSize('large')}
+                >
+                  <div className="size-card-top">
+                    <div className="size-icon-badge size-lg">
+                      <Coffee size={21} />
+                    </div>
+                    <div className="size-label-group">
+                      <span className="size-name-main">{isAr ? "كبير" : "Large"}</span>
+                      {caloriesLarge && (
+                        <span className="size-cal-hint">{caloriesLarge} {isAr ? "سعرة" : "cal"}</span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="size-price-tag">
+                    {priceLarge} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                  </div>
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Beverage Sugar Level Customizer */}
           {isBeverage && (

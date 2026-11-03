@@ -24,6 +24,11 @@ export default function OriginalBoardView({
           <span className="board-title-en">{titleEn}</span>
           <span className="board-title-ar">{titleAr}</span>
         </div>
+        {items.some(i => i.priceSmall != null && i.priceLarge != null && i.priceSmall !== i.priceLarge) && (
+          <span className="board-sizes-tag">
+            {isAr ? "صغير / كبير" : "S / L"}
+          </span>
+        )}
       </div>
 
       {/* Board Item List */}
@@ -43,7 +48,11 @@ export default function OriginalBoardView({
               onClick={() => onSelectItem(item)}
               title="Click to customize and order"
             >
-              <div className="board-row-price">{item.price}</div>
+              <div className="board-row-price">
+                {item.priceSmall != null && item.priceLarge != null && item.priceSmall !== item.priceLarge
+                  ? `${item.priceSmall}/${item.priceLarge}`
+                  : item.price}
+              </div>
               <div className="board-row-name-en">{item.nameEn}</div>
               <div className="board-row-name-ar">{item.nameAr}</div>
             </div>

@@ -65,7 +65,14 @@ export default function OrderSuccessModal({
             {order.items.map((item, idx) => (
               <div key={idx} className="receipt-item-row">
                 <div className="receipt-item-name">
-                  <span>{item.quantity}x {isAr ? item.nameAr : item.nameEn}</span>
+                  <span>
+                    {item.quantity}x {isAr ? item.nameAr : item.nameEn}
+                    {item.selectedSize && (
+                      <span className="receipt-item-size-tag">
+                        {" "}({isAr ? (item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')) : (item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small'))})
+                      </span>
+                    )}
+                  </span>
                   {item.specialNotes && (
                     <small className="receipt-subnote">({item.specialNotes})</small>
                   )}

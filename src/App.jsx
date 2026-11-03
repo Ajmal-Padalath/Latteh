@@ -76,8 +76,35 @@ export default function App() {
 
   // Add Item to Cart
   const handleAddToCart = (customizedItem) => {
-    setCart((prev) => [...prev, customizedItem]);
-    showToast(lang === 'ar' ? `تمت إضافة "${customizedItem.nameAr}" إلى السلة` : `Added "${customizedItem.nameEn}" to order`);
+    setCart((prev) => {
+      const existingIndex = prev.findIndex((item) => 
+        item.id === customizedItem.id &&
+        item.selectedSize === customizedItem.selectedSize &&
+        item.selectedSugar === customizedItem.selectedSugar &&
+        item.selectedMilk === customizedItem.selectedMilk &&
+        item.selectedIce === customizedItem.selectedIce &&
+        item.specialNotes === customizedItem.specialNotes &&
+        JSON.stringify(item.selectedAddOns || []) === JSON.stringify(customizedItem.selectedAddOns || [])
+      );
+
+      if (existingIndex > -1) {
+        const updated = [...prev];
+        const newQty = updated[existingIndex].quantity + customizedItem.quantity;
+        updated[existingIndex] = {
+          ...updated[existingIndex],
+          quantity: newQty,
+          totalPrice: updated[existingIndex].unitPrice * newQty
+        };
+        return updated;
+      }
+
+      return [...prev, customizedItem];
+    });
+
+    const sizeSuffix = customizedItem.selectedSize
+      ? (lang === 'ar' ? ` (${customizedItem.sizeLabelAr || (customizedItem.selectedSize === 'large' ? 'كبير' : 'صغير')})` : ` (${customizedItem.sizeLabelEn || (customizedItem.selectedSize === 'large' ? 'Large' : 'Small')})`)
+      : '';
+    showToast(lang === 'ar' ? `تمت إضافة "${customizedItem.nameAr}${sizeSuffix}" إلى السلة` : `Added "${customizedItem.nameEn}${sizeSuffix}" to order`);
   };
 
   // Update Item Quantity in Cart

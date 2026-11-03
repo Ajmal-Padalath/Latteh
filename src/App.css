@@ -1843,7 +1843,7 @@
 
 .board-row-item {
   display: grid;
-  grid-template-columns: 36px 1fr 1fr;
+  grid-template-columns: 50px 1fr 1fr;
   align-items: center;
   padding: 5px 6px;
   border-radius: 4px;
@@ -2201,3 +2201,196 @@
 .text-muted {
   color: var(--text-muted);
 }
+
+/* ==================== SIZES CUSTOMIZATION & BADGES ==================== */
+.badge-sizes {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(201, 150, 53, 0.95);
+  color: #0b2e24;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.price-tag-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.price-size-sublabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: -0.2px;
+}
+
+/* Size Selection in Customizer Modal */
+.size-selection-section {
+  margin-bottom: 20px;
+}
+
+.size-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.size-card-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--cream-soft);
+  border: 2px solid var(--cream-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: right;
+  position: relative;
+  min-height: 84px;
+}
+
+[dir="ltr"] .size-card-btn {
+  text-align: left;
+}
+
+.size-card-btn:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.size-card-btn.active {
+  background: rgba(201, 150, 53, 0.12);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 1px var(--accent-gold), 0 4px 14px rgba(201, 150, 53, 0.2);
+}
+
+[data-theme='dark'] .size-card-btn {
+  background: var(--card-bg);
+  border-color: var(--cream-border);
+}
+
+[data-theme='dark'] .size-card-btn.active {
+  background: rgba(201, 150, 53, 0.18);
+  border-color: var(--accent-gold);
+}
+
+.size-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.size-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(14, 59, 46, 0.08);
+  color: var(--primary);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.size-card-btn.active .size-icon-badge {
+  background: var(--accent-gold);
+  color: #0b2e24;
+}
+
+[data-theme='dark'] .size-icon-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: #a7f3d0;
+}
+
+[data-theme='dark'] .size-card-btn.active .size-icon-badge {
+  background: var(--accent-gold);
+  color: #0b2e24;
+}
+
+.size-label-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-name-main {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.size-cal-hint {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.size-price-tag {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  align-self: flex-end;
+}
+
+[dir="ltr"] .size-price-tag {
+  align-self: flex-start;
+}
+
+/* Cart Drawer Size Highlights */
+.cart-size-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  margin-right: 4px;
+}
+
+[dir="ltr"] .cart-size-pill {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+.cart-size-pill-en {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.tag-size-highlight {
+  background: rgba(201, 150, 53, 0.18) !important;
+  color: var(--accent-gold) !important;
+  font-weight: 800 !important;
+  border: 1px solid rgba(201, 150, 53, 0.35) !important;
+}
+
+/* Receipt Size Indicator */
+.receipt-item-size-tag {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 0.88rem;
+}
+
+[data-theme='dark'] .receipt-item-size-tag {
+  color: var(--accent-gold);
+}
+
+/* Original Board Size Tag */
+.board-sizes-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: rgba(201, 150, 53, 0.22);
+  color: var(--accent-gold);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-inline-start: auto;
+}
+

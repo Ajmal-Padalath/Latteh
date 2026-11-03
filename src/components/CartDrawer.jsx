@@ -31,8 +31,14 @@ export default function CartDrawer({
     message += `------------------------\n`;
 
     cart.forEach((item, index) => {
-      message += `${index + 1}. *${item.nameAr} (${item.nameEn})* x ${item.quantity} = ${item.totalPrice} ر.س\n`;
+      const sizeTag = item.selectedSize
+        ? ` [${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')} / ${item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small')}]`
+        : '';
+      message += `${index + 1}. *${item.nameAr} (${item.nameEn})*${sizeTag} x ${item.quantity} = ${item.totalPrice} ر.س\n`;
       const extras = [];
+      if (item.selectedSize) {
+        extras.push(`الحجم: ${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')}`);
+      }
       if (item.selectedSugar) extras.push(`السكر: ${item.selectedSugar}`);
       if (item.selectedMilk && item.selectedMilk !== 'full') extras.push(`الحليب: ${item.selectedMilk}`);
       if (item.selectedIce) extras.push(`الثلج: ${item.selectedIce}`);
@@ -127,8 +133,22 @@ export default function CartDrawer({
                   <div className="cart-item-details">
                     <div className="cart-item-top">
                       <div>
-                        <h4 className="cart-item-name-ar">{item.nameAr}</h4>
-                        <span className="cart-item-name-en">{item.nameEn}</span>
+                        <h4 className="cart-item-name-ar">
+                          {item.nameAr}
+                          {item.selectedSize && (
+                            <span className="cart-size-pill">
+                              ({item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')})
+                            </span>
+                          )}
+                        </h4>
+                        <span className="cart-item-name-en">
+                          {item.nameEn}
+                          {item.selectedSize && (
+                            <span className="cart-size-pill-en">
+                              ({item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small')})
+                            </span>
+                          )}
+                        </span>
                       </div>
                       <button 
                         className="delete-item-btn" 
@@ -141,6 +161,13 @@ export default function CartDrawer({
 
                     {/* Customization Badges */}
                     <div className="cart-item-custom-tags">
+                      {item.selectedSize && (
+                        <span className="tag-spec tag-size-highlight">
+                          {isAr 
+                            ? `الحجم: ${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')}` 
+                            : `Size: ${item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small')}`}
+                        </span>
+                      )}
                       {item.selectedSugar && (
                         <span className="tag-spec">{item.selectedSugar}</span>
                       )}
