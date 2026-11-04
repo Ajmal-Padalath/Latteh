@@ -36,7 +36,7 @@ export default function OriginalBoardView({
         {/* Floating illustrative image like on physical board */}
         {heroImg && (
           <div className="board-hero-art">
-            <img src={heroImg} alt={titleEn} loading="lazy" />
+            {/* <img src={heroImg} alt={titleEn} loading="lazy" /> */}
           </div>
         )}
 
