@@ -239,33 +239,29 @@ export default function QrCodeModal({
                 </a>
 
                 <a
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                    (isAr ? '☕ تفضل بزيارة قائمة مقهى لاتيه ليستر الرقمية:\n' : '☕ Explore Latteh Leicester Digital Menu:\n')
-                  )}&url=${encodeURIComponent(menuUrl)}`}
+                  href={`https://www.snapchat.com/scan?attachmentUrl=${encodeURIComponent(menuUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-share-item social-x"
-                  title="X (Twitter)"
+                  className="social-share-item social-snapchat"
+                  title="Snapchat"
                 >
                   <svg className="social-svg-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    <path d="M12 1.5c-3.3 0-5.34 2.52-5.34 5.85 0 .99.15 2.1.3 3.09-.48.27-1.05.42-1.62.42-.39 0-.75-.09-1.08-.24-.24-.12-.51-.03-.63.21-.12.24-.03.51.21.63.45.24.96.36 1.5.36.75 0 1.47-.21 2.1-.63l.15.93c.06.48-.12.96-.51 1.26-.84.66-1.8 1.26-2.85 1.62-.39.12-.63.48-.57.9.06.39.39.69.78.72.66.06 1.32.21 1.95.45.3.12.51.36.57.69l.06.36c.06.36.36.63.72.63.84 0 1.65.27 2.34.78.57.42 1.26.63 1.95.63s1.38-.21 1.95-.63c.69-.51 1.5-.78 2.34-.78.36 0 .66-.27.72-.63l.06-.36c.06-.33.27-.57.57-.69.63-.24 1.29-.39 1.95-.45.39-.03.72-.33.78-.72.06-.42-.18-.78-.57-.9-1.05-.36-2.01-.96-2.85-1.62-.39-.3-.57-.78-.51-1.26l.15-.93c.63.42 1.35.63 2.1.63.54 0 1.05-.12 1.5-.36.24-.12.33-.39.21-.63-.12-.24-.39-.33-.63-.21-.33.15-.69.24-1.08.24-.57 0-1.14-.15-1.62-.42.15-.99.3-2.1.3-3.09C17.34 4.02 15.3 1.5 12 1.5z" />
                   </svg>
-                  <span>X / Twitter</span>
+                  <span>Snapchat</span>
                 </a>
 
                 <a
-                  href={`https://t.me/share/url?url=${encodeURIComponent(menuUrl)}&text=${encodeURIComponent(
-                    isAr ? '☕ قائمة مقهى لاتيه ليستر الرقمية' : '☕ Latteh Leicester Digital Menu'
-                  )}`}
+                  href={`https://www.instagram.com/${RESTAURANT_INFO.instagram.replace(/^@/, '')}/`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-share-item social-telegram"
-                  title="Telegram"
+                  className="social-share-item social-instagram"
+                  title="Instagram"
                 >
                   <svg className="social-svg-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z" />
+                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
                   </svg>
-                  <span>Telegram</span>
+                  <span>Instagram</span>
                 </a>
               </div>
             </div>

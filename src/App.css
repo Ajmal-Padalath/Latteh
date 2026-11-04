@@ -1672,25 +1672,21 @@
   background: #20bd5a;
 }
 
-.social-x {
-  background: #111111;
+.social-snapchat {
+  background: #fffc00;
+  color: #000 !important;
 }
 
-[data-theme='dark'] .social-x {
-  background: #222222;
-  border: 1px solid #444444;
+.social-snapchat:hover {
+  background: #eee900;
 }
 
-.social-x:hover {
-  background: #000000;
+.social-instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e 35%, #d62976 65%, #4f5bd5);
 }
 
-.social-telegram {
-  background: #0088cc;
-}
-
-.social-telegram:hover {
-  background: #0077b5;
+.social-instagram:hover {
+  filter: brightness(0.92);
 }
 
 /* Scanner Viewfinder */
@@ -2592,4 +2588,3 @@
   border-radius: var(--radius-full);
   margin-inline-start: auto;
 }
-
