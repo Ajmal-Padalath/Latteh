@@ -185,7 +185,7 @@ export default function App() {
       {viewMode === 'board' ? (
         <OriginalBoardView
           lang={lang}
-          onSelectItem={(item) => setSelectedItemForModal(item)}
+          onSelectItem={(item, size) => setSelectedItemForModal(size ? { ...item, defaultSelectedSize: size } : item)}
         />
       ) : (
         <>

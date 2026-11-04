@@ -14,6 +14,7 @@ export default function ItemCustomizerModal({
   const hasSizes = item.categoryId === 'hot_coffee' || item.categoryId === 'tea' || (item.priceSmall != null && item.priceLarge != null);
 
   const [selectedSize, setSelectedSize] = useState(() => {
+    if (item.defaultSelectedSize) return item.defaultSelectedSize;
     if (hasSizes) {
       return 'small';
     }

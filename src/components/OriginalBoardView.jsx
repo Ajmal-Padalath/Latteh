@@ -16,51 +16,100 @@ export default function OriginalBoardView({
   const desserts = MENU_ITEMS.filter(i => i.categoryId === 'desserts');
   const coldCoffee = MENU_ITEMS.filter(i => i.categoryId === 'cold_coffee');
 
-  const renderSection = (titleEn, titleAr, items, iconType, heroImg) => (
-    <div className="board-section-card">
-      {/* Header bar matching the physical menu */}
-      <div className="board-section-header">
-        <div className="board-header-content">
-          <span className="board-title-en">{titleEn}</span>
-          <span className="board-title-ar">{titleAr}</span>
-        </div>
-        {items.some(i => i.priceSmall != null && i.priceLarge != null && i.priceSmall !== i.priceLarge) && (
-          <span className="board-sizes-tag">
-            {isAr ? "صغير / كبير" : "Small / Large"}
-          </span>
-        )}
-      </div>
+  const renderSection = (titleEn, titleAr, items, iconType, heroImg) => {
+    const hasSizes = items.some(i => i.priceSmall != null && i.priceLarge != null && i.priceSmall !== i.priceLarge);
 
-      {/* Board Item List */}
-      <div className="board-items-container">
-        {/* Floating illustrative image like on physical board */}
-        {heroImg && (
-          <div className="board-hero-art">
-            {/* <img src={heroImg} alt={titleEn} loading="lazy" /> */}
+    return (
+      <div className="board-section-card">
+        {/* Header bar matching the physical menu */}
+        <div className="board-section-header">
+          <div className="board-header-content">
+            <span className="board-title-en">{titleEn}</span>
+            <span className="board-title-ar">{titleAr}</span>
           </div>
-        )}
+        </div>
 
-        <div className="board-table-rows">
-          {items.map((item) => (
-            <div 
-              key={item.id} 
-              className="board-row-item"
-              onClick={() => onSelectItem(item)}
-              title="Click to customize and order"
-            >
-              <div className="board-row-price">
-                {item.priceSmall != null && item.priceLarge != null && item.priceSmall !== item.priceLarge
-                  ? `${item.priceSmall}/${item.priceLarge}`
-                  : item.price}
-              </div>
-              <div className="board-row-name-en">{item.nameEn}</div>
-              <div className="board-row-name-ar">{item.nameAr}</div>
+        {/* Board Item List */}
+        <div className="board-items-container">
+          {/* Floating illustrative image like on physical board */}
+          {heroImg && (
+            <div className="board-hero-art">
+              {/* <img src={heroImg} alt={titleEn} loading="lazy" /> */}
             </div>
-          ))}
+          )}
+
+          {/* Table Header */}
+          <div className={`board-table-header ${hasSizes ? 'has-sizes' : 'single-price'}`}>
+            {hasSizes ? (
+              <>
+                <div className="board-th-col board-th-price board-th-sm">
+                  <span className="th-label-en">Small</span>
+                  <span className="th-label-ar">صغير</span>
+                </div>
+                <div className="board-th-col board-th-price board-th-lg">
+                  <span className="th-label-en">Large</span>
+                  <span className="th-label-ar">كبير</span>
+                </div>
+              </>
+            ) : (
+              <div className="board-th-col board-th-price">
+                <span className="th-label-en">Price</span>
+                <span className="th-label-ar">السعر</span>
+              </div>
+            )}
+            <div className="board-th-col board-th-name-en">
+              <span>Item</span>
+            </div>
+            <div className="board-th-col board-th-name-ar">
+              <span>الصنف</span>
+            </div>
+          </div>
+
+          <div className="board-table-rows">
+            {items.map((item) => (
+              <div 
+                key={item.id} 
+                className={`board-row-item ${hasSizes ? 'has-sizes' : 'single-price'}`}
+                onClick={() => onSelectItem(item)}
+                title="Click to customize and order"
+              >
+                {hasSizes ? (
+                  <>
+                    <div 
+                      className="board-row-price board-col-sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelectItem(item, 'small');
+                      }}
+                      title={isAr ? "طلب الحجم الصغير" : "Order Small"}
+                    >
+                      {item.priceSmall != null ? item.priceSmall : item.price}
+                    </div>
+                    <div 
+                      className="board-row-price board-col-lg"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelectItem(item, 'large');
+                      }}
+                      title={isAr ? "طلب الحجم الكبير" : "Order Large"}
+                    >
+                      {item.priceLarge != null ? item.priceLarge : item.price}
+                    </div>
+                  </>
+                ) : (
+                  <div className="board-row-price">
+                    {item.price}
+                  </div>
+                )}
+                <div className="board-row-name-en">{item.nameEn}</div>
+                <div className="board-row-name-ar">{item.nameAr}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="original-board-wrapper">

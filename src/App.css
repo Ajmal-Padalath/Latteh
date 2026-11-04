@@ -1834,23 +1834,123 @@
   border-radius: 50%;
 }
 
+/* Table Header inside each board section */
+.board-table-header {
+  display: grid;
+  align-items: center;
+  padding: 6px 8px;
+  background: rgba(201, 150, 53, 0.12);
+  border-bottom: 2px solid #e2cb9b;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  direction: ltr; /* Keeps columns in exact physical board order: Price -> En -> Ar */
+}
+
+[data-theme='dark'] .board-table-header {
+  background: rgba(201, 150, 53, 0.15);
+  border-bottom-color: #3b3023;
+}
+
+.board-table-header.has-sizes {
+  grid-template-columns: 52px 52px 1fr 1fr;
+}
+
+.board-table-header.single-price {
+  grid-template-columns: 56px 1fr 1fr;
+}
+
+.board-th-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
+.board-th-price {
+  align-items: center;
+  text-align: center;
+}
+
+.board-th-name-en {
+  align-items: flex-start;
+  padding: 0 6px;
+  font-family: var(--font-en);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #0d3829;
+}
+
+[data-theme='dark'] .board-th-name-en {
+  color: #a7f3d0;
+}
+
+.board-th-name-ar {
+  align-items: flex-end;
+  padding: 0 6px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #0d3829;
+}
+
+[data-theme='dark'] .board-th-name-ar {
+  color: #a7f3d0;
+}
+
+.th-label-en {
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #0d3829;
+}
+
+[data-theme='dark'] .th-label-en {
+  color: #a7f3d0;
+}
+
+.th-label-ar {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #8b6823;
+}
+
+[data-theme='dark'] .th-label-ar {
+  color: var(--accent-gold);
+}
+
 .board-table-rows {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .board-row-item {
   display: grid;
-  grid-template-columns: 50px 1fr 1fr;
   align-items: center;
-  padding: 5px 6px;
+  padding: 5px 8px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--transition-fast);
+  transition: all var(--transition-fast);
   font-size: 0.88rem;
   line-height: 1.3;
+  direction: ltr; /* Keeps columns in exact physical board order */
+  border-bottom: 1px dashed rgba(201, 150, 53, 0.2);
+}
+
+.board-row-item:last-child {
+  border-bottom: none;
+}
+
+.board-row-item.has-sizes {
+  grid-template-columns: 52px 52px 1fr 1fr;
+}
+
+.board-row-item.single-price {
+  grid-template-columns: 56px 1fr 1fr;
 }
 
 .board-row-item:hover {
@@ -1859,8 +1959,20 @@
 
 .board-row-price {
   font-weight: 900;
-  color: #dc2626; /* Authentic red numbers as seen in the physical board photo! */
-  font-size: 0.95rem;
+  color: #dc2626; /* Iconic red numbers */
+  font-size: 0.98rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.board-row-item.has-sizes .board-row-price:hover {
+  background: rgba(220, 38, 38, 0.15);
+  transform: scale(1.12);
 }
 
 .board-row-name-en {
@@ -1868,14 +1980,14 @@
   font-weight: 600;
   color: var(--text-primary);
   text-align: left;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 .board-row-name-ar {
   font-weight: 800;
   color: var(--text-primary);
   text-align: right;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 /* Call Waiter Sheet */
