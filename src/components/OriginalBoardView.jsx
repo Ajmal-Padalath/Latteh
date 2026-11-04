@@ -26,7 +26,7 @@ export default function OriginalBoardView({
         </div>
         {items.some(i => i.priceSmall != null && i.priceLarge != null && i.priceSmall !== i.priceLarge) && (
           <span className="board-sizes-tag">
-            {isAr ? "صغير / كبير" : "S / L"}
+            {isAr ? "صغير / كبير" : "Small / Large"}
           </span>
         )}
       </div>

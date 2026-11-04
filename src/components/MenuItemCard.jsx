@@ -48,7 +48,7 @@ export default function MenuItemCard({
           )}
           {hasSizes && (
             <span className="badge-sizes">
-              <span>{isAr ? "صغير / كبير" : "S / L"}</span>
+              <span>{isAr ? "صغير / كبير" : "Small / Large"}</span>
             </span>
           )}
         </div>
