@@ -108,7 +108,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Enjoy our signature Spanish Latte, freshly brewed espresso blended with smooth steamed milk and sweet condensed milk. Rich, creamy and perfectly balanced, with a delightful coffee aroma and a naturally sweet finish.",
     descriptionAr: "استمتع بسبانيش لاتيه المميز، إسبريسو طازج ممزوج مع الحليب المبخر والحليب المكثف المحلى. قوام كريمي وطعم غني يجمع بين نكهة القهوة والحلاوة المتوازنة.",
-    image: "/images/hot-coffee/spanish-latte-hot.jpg"
+    image: "./spanish-latte-hot.jpeg"
   },
   {
     id: "hc-2",
@@ -127,7 +127,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Signature"],
     descriptionEn: "A classic café favourite made with freshly extracted espresso and silky steamed milk. Smooth, creamy and beautifully balanced, with a gentle coffee flavour and a delicate layer of milk foam.",
     descriptionAr: "لاتيه كلاسيكي محضر من إسبريسو طازج وحليب مبخر ناعم. طعم متوازن وقوام كريمي مع نكهة قهوة واضحة وطبقة خفيفة من رغوة الحليب.",
-    image: "/images/hot-coffee/latte.jpg"
+    image: "./latte.jpeg"
   },
   {
     id: "hc-3",
@@ -146,7 +146,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller", "Signature"],
     descriptionEn: "A delicious cappuccino combining rich espresso, velvety steamed milk and a generous layer of soft milk foam. Every sip delivers a beautiful balance of bold coffee flavour and creamy smoothness.",
     descriptionAr: "كابتشينو لذيذ يجمع بين الإسبريسو الغني والحليب المبخر الناعم وطبقة كثيفة من رغوة الحليب. كل رشفة تقدم توازناً رائعاً بين قوة القهوة والقوام الكريمي.",
-    image: "/images/hot-coffee/cappuccino.jpg"
+    image: "./cappuccino.jpeg"
   },
   {
     id: "hc-4",
@@ -165,7 +165,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Discover a fresh coffee experience every day. Carefully brewed to bring out the natural aroma and flavour of the coffee beans, served hot for a comforting and satisfying coffee moment.",
     descriptionAr: "استمتع بتجربة قهوة متجددة كل يوم. يتم تحضيرها بعناية لإبراز نكهة ورائحة حبوب القهوة، وتقدم ساخنة لعشاق القهوة بطعمها الأصيل.",
-    image: "/images/hot-coffee/coffee-of-the-day.jpg"
+    image: "./coffee-of-the-day.jpeg"
   },
   {
     id: "hc-5",
@@ -184,7 +184,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller"],
     descriptionEn: "A timeless coffee classic made with freshly extracted espresso and hot water. Light in texture yet rich in aroma, offering a clean, smooth coffee taste that you can enjoy any time of the day.",
     descriptionAr: "أمريكانو كلاسيكي محضر من إسبريسو طازج وماء ساخن. قوام خفيف مع رائحة قهوة غنية وطعم ناعم ومتوازن يناسب أي وقت من اليوم.",
-    image: "/images/hot-coffee/americano.jpg"
+    image: "./americano.jpeg"
   },
   {
     id: "hc-6",
@@ -203,7 +203,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Drip", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Experience the art of hand-brewed coffee with our V60. Freshly ground coffee is carefully poured over hot water to create a clean, aromatic cup with delicate flavours and a smooth finish.",
     descriptionAr: "عش تجربة القهوة المقطرة بطريقة V60، حيث يتم صب الماء الساخن بعناية على القهوة المطحونة الطازجة. كوب غني بالرائحة ونكهة واضحة وقوام خفيف ونهاية ناعمة.",
-    image: "/images/hot-coffee/v60-drip-coffee.jpg"
+    image: "./v60-drip-coffee.jpeg"
   },
   {
     id: "hc-7",
@@ -222,7 +222,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller"],
     descriptionEn: "A beautifully balanced coffee made with rich espresso and velvety microfoamed milk. Stronger in coffee character yet wonderfully smooth, creating a creamy texture with every sip.",
     descriptionAr: "قهوة متوازنة تجمع بين الإسبريسو الغني والحليب المبخر برغوة ناعمة جداً. تتميز بنكهة قهوة واضحة وقوام كريمي ناعم في كل رشفة.",
-    image: "/images/hot-coffee/flat-white.jpg"
+    image: "./flat-white.jpeg"
   },
   {
     id: "hc-8",
@@ -241,7 +241,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Espresso", "Popular", "Bestseller", "Signature"],
     descriptionEn: "A pure and powerful coffee experience featuring one freshly extracted shot of espresso. Concentrated, aromatic and full of character, perfect for those who appreciate the authentic taste of coffee.",
     descriptionAr: "تجربة قهوة أصيلة مع جرعة واحدة من الإسبريسو المستخلص الطازج. نكهة مركزة ورائحة غنية وقوام قوي لعشاق طعم القهوة الحقيقي.",
-    image: "/images/hot-coffee/single-espresso.jpg"
+    image: "./single-espresso.jpeg"
   },
   {
     id: "hc-9",
@@ -260,7 +260,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Turkish", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Enjoy the traditional taste of Al Ameed Turkish Coffee, prepared with finely ground coffee for a rich aroma and distinctive flavour. A comforting classic with an authentic Turkish coffee experience.",
     descriptionAr: "استمتع بالطعم التقليدي لقهوة العميد التركية، المحضرة من القهوة المطحونة ناعماً لتمنحك رائحة غنية ونكهة مميزة. قهوة أصيلة بطابع تركي كلاسيكي.",
-    image: "/images/hot-coffee/al-ameed-turkish-coffee.jpg"
+    image: "./al-ameed-turkish-coffee.jpeg"
   },
   {
     id: "hc-10",
@@ -279,7 +279,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Arabic", "Popular", "Bestseller"],
     descriptionEn: "A traditional Arabic coffee experience with a delicate aroma and distinctive regional character. Light, warming and comforting, perfect for enjoying with dates and sharing special moments.",
     descriptionAr: "قهوة عربية تقليدية برائحة مميزة وطابع أصيل. خفيفة ودافئة بطعمها المعروف، مثالية للاستمتاع بها مع التمر ومشاركة اللحظات الجميلة.",
-    image: "/images/hot-coffee/arabic-coffee.jpg"
+    image: "./arabic-coffee.jpeg"
   },
   {
     id: "hc-11",
@@ -298,7 +298,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Chocolate", "Popular", "Bestseller"],
     descriptionEn: "Treat yourself to a rich and comforting hot chocolate made with chocolate blended into warm milk. Smooth, velvety and deliciously chocolatey, with a creamy texture that makes every sip special.",
     descriptionAr: "دلل نفسك بهوت شوكليت غني ولذيذ، محضر بمزج الشوكولاتة مع الحليب الساخن. قوام ناعم وكريمي ونكهة شوكولاتة واضحة تمنحك لحظة دافئة ومميزة.",
-    image: "/images/hot-coffee/hot-chocolate.jpg"
+    image: "./hot-chocolate.jpeg"
   },
   {
     id: "hc-12",
@@ -317,7 +317,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Enjoy a rich Italian-style coffee experience with a deep roasted aroma and satisfying coffee flavour. Carefully prepared and served hot, offering a comforting cup inspired by classic Italian café culture.",
     descriptionAr: "استمتع بتجربة قهوة إيطالية بنكهة غنية ورائحة تحميص مميزة. يتم تحضيرها بعناية وتقديمها ساخنة لعشاق القهوة بطابع المقاهي الإيطالية.",
-    image: "/images/hot-coffee/italian-coffee.jpg"
+    image: "./italiancoffee.jpeg"
   },
   {
     id: "hc-13",
@@ -336,7 +336,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller", "Signature"],
     descriptionEn: "A smooth and aromatic French-style coffee with a rich, comforting taste. Carefully prepared for a warm and relaxing coffee experience, bringing together inviting aroma and satisfying flavour.",
     descriptionAr: "قهوة فرنسية ناعمة برائحة جذابة وطعم غني ومريح. محضرة بعناية لتمنحك تجربة قهوة دافئة ومميزة بنكهة متوازنة.",
-    image: "/images/hot-coffee/french-coffee.jpg"
+    image: "./french-coffee.jpeg"
   },
   {
     id: "hc-14",
@@ -355,7 +355,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee"],
     descriptionEn: "A bold espresso topped with a delicate touch of milk foam. Simple yet full of character, allowing the rich coffee aroma and concentrated flavour to shine through.",
     descriptionAr: "إسبريسو قوي تعلوه لمسة خفيفة من رغوة الحليب. قهوة بسيطة ومميزة تبرز فيها رائحة الإسبريسو الغنية ونكهته المركزة.",
-    image: "/images/hot-coffee/macchiato.jpg"
+    image: "./macchato.jpeg"
   },
   {
     id: "hc-15",
@@ -374,7 +374,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Espresso", "Popular", "Bestseller"],
     descriptionEn: "Twice the espresso, twice the intensity. Made with two freshly extracted espresso shots, delivering a stronger coffee flavour, rich aroma and a bold finish for true coffee lovers.",
     descriptionAr: "نكهة إسبريسو أقوى مع جرعتين من القهوة المستخلصة الطازجة. طعم مركز ورائحة غنية وقوة إضافية لعشاق القهوة القوية.",
-    image: "/images/hot-coffee/double-espresso.jpg"
+    image: "./double-espresso.jpeg"
   },
   {
     id: "hc-16",
@@ -393,7 +393,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Chocolate"],
     descriptionEn: "A delicious combination of freshly brewed espresso, rich chocolate and smooth steamed milk. This comforting hot mocha brings together the boldness of coffee and the sweetness of chocolate.",
     descriptionAr: "مزيج لذيذ من الإسبريسو الطازج والشوكولاتة الغنية والحليب المبخر الناعم. موكا ساخنة تجمع بين قوة القهوة وحلاوة الشوكولاتة.",
-    image: "/images/hot-coffee/hot-mocha.jpg"
+    image: "./hot-mocha.jpeg"
   },
   {
     id: "hc-17",
@@ -412,7 +412,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Caramel"],
     descriptionEn: "A delightful blend of espresso, smooth steamed milk and sweet caramel flavour. Creamy and indulgent, with a beautiful coffee aroma and a delicious caramel finish.",
     descriptionAr: "مزيج لذيذ من الإسبريسو والحليب المبخر الناعم ونكهة الكراميل الحلوة. قوام كريمي وطعم غني مع لمسة كراميل مميزة في النهاية.",
-    image: "/images/hot-coffee/caramel-macchiato.jpg"
+    image: "./caramel-macchato.jpeg"
   },
   {
     id: "hc-18",
@@ -431,7 +431,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Popular", "Bestseller"],
     descriptionEn: "A familiar coffee favourite prepared as a warm and comforting cup. Enjoy its distinctive instant coffee aroma and classic flavour, perfect for a quick coffee break.",
     descriptionAr: "قهوة كلاسيكية محبوبة تقدم في كوب دافئ ومريح. تتميز برائحتها المعروفة ونكهتها التقليدية، مثالية للاستمتاع باستراحة قهوة سريعة.",
-    image: "/images/hot-coffee/nescafe.jpg"
+    image: "./nescafe.jpeg"
   },
   {
     id: "hc-19",
@@ -450,7 +450,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee"],
     descriptionEn: "A balanced combination of espresso and warm milk, creating a smooth coffee with a rich flavour and gentle creamy texture. Perfect for those who enjoy a coffee-forward drink with a softer finish.",
     descriptionAr: "مزيج متوازن من الإسبريسو والحليب الدافئ، يمنحك قهوة ناعمة بنكهة غنية وقوام كريمي خفيف. مثالية لمحبي القهوة بطعم واضح ونهاية ناعمة.",
-    image: "/images/hot-coffee/cortado.jpg"
+    image: "./cortado.jpeg"
   },
   {
     id: "hc-20",
@@ -469,7 +469,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "White Chocolate"],
     descriptionEn: "A luxurious white mocha combining espresso, creamy white chocolate and steamed milk. Sweet, smooth and velvety, with a delightful blend of coffee richness and white chocolate flavour.",
     descriptionAr: "وايت موكا فاخرة تجمع بين الإسبريسو والشوكولاتة البيضاء الكريمية والحليب المبخر. طعم حلو وناعم بقوام مخملي ومزيج لذيذ من القهوة والشوكولاتة البيضاء.",
-    image: "/images/hot-coffee/white-mocha.jpg"
+    image: "./white-mocha.jpeg"
   },
   {
     id: "hc-21",
@@ -488,7 +488,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Toffee"],
     descriptionEn: "A warm and creamy toffee-flavoured drink with a sweet, buttery aroma and a smooth finish. A comforting choice for anyone who loves rich caramel-like flavours.",
     descriptionAr: "مشروب توفي ساخن وكريمي بنكهة حلوة ورائحة غنية تشبه الكراميل. خيار دافئ ولذيذ لمحبي النكهات الحلوة والقوام الناعم.",
-    image: "/images/hot-coffee/hot-toffee.jpg"
+    image: "./hot-toffee.jpeg"
   },
   {
     id: "hc-22",
@@ -507,7 +507,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Latte", "Saffron"],
     descriptionEn: "A fragrant saffron latte made with espresso, steamed milk and delicate saffron flavour. Smooth and creamy, with a distinctive aromatic touch that makes this drink truly special.",
     descriptionAr: "لاتيه الزعفران المميز يجمع بين الإسبريسو والحليب المبخر ونكهة الزعفران العطرية. قوام كريمي وطعم ناعم مع لمسة فاخرة ومميزة.",
-    image: "/images/hot-coffee/saffron-latte.jpg"
+    image: "./saffron-latte.jpeg"
   },
   {
     id: "hc-23",
@@ -526,7 +526,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Latte", "Pistachio"],
     descriptionEn: "A creamy pistachio latte combining espresso, steamed milk and delicious pistachio flavour. Smooth, nutty and indulgent, offering a rich coffee experience with a distinctive pistachio touch.",
     descriptionAr: "لاتيه الفستق يجمع بين الإسبريسو والحليب المبخر ونكهة الفستق اللذيذة. قوام كريمي وطعم غني بلمسة مكسرات مميزة لعشاق الفستق.",
-    image: "/images/hot-coffee/pistachio-latte.jpg"
+    image: "./pistachio-latte.jpeg"
   },
   {
     id: "hc-24",
@@ -545,7 +545,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Latte", "Cardamom"],
     descriptionEn: "A comforting latte infused with the warm and aromatic flavour of cardamom. Smooth espresso and steamed milk come together to create a creamy drink with a distinctive Middle Eastern touch.",
     descriptionAr: "لاتيه بنكهة الهيل العطرية والدافئة، يجمع بين الإسبريسو الناعم والحليب المبخر ليمنحك قواماً كريمياً ولمسة شرقية مميزة.",
-    image: "/images/hot-coffee/cardamom-latte.jpg"
+    image: "./cardamom-latte.jpeg"
   },
   {
     id: "hc-25",
@@ -564,7 +564,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Latte", "Honey"],
     descriptionEn: "A smooth and creamy latte made with freshly extracted espresso, steamed milk and natural honey. Finished with a gentle honey sweetness and a rich coffee aroma for a warm, comforting experience.",
     descriptionAr: "لاتيه كريمي وناعم يجمع بين الإسبريسو الطازج والحليب المبخر وحلاوة العسل الطبيعي. بطعم متوازن ولمسة عسل لذيذة مع نكهة القهوة الغنية في كل رشفة.",
-    image: "/images/hot-coffee/honey-latte.jpg"
+    image: "./honey-latte.jpeg"
   },
   {
     id: "hc-26",
@@ -583,7 +583,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Latte", "Cinnamon"],
     descriptionEn: "A smooth espresso latte enhanced with the warm, fragrant taste of cinnamon. Creamy steamed milk and aromatic cinnamon create a comforting drink with a lovely spiced finish.",
     descriptionAr: "لاتيه ناعم يجمع بين الإسبريسو والحليب المبخر ونكهة القرفة العطرية. مشروب كريمي ودافئ بلمسة من التوابل ونهاية مميزة.",
-    image: "/images/hot-coffee/cinnamon-latte.jpg"
+    image: "./cinnamon-latte.jpeg"
   },
   {
     id: "hc-27",
@@ -602,7 +602,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Turkish", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Discover the traditional taste of Barn's Turkish Coffee, prepared with finely ground coffee for a rich aroma and distinctive flavour. A classic choice for anyone who enjoys authentic Turkish coffee.",
     descriptionAr: "اكتشف الطعم التقليدي لقهوة بارنز التركية، المحضرة من القهوة المطحونة ناعماً لتمنحك رائحة غنية ونكهة مميزة. خيار كلاسيكي لمحبي القهوة التركية الأصيلة.",
-    image: "/images/hot-coffee/barns-turkish-coffee.jpg"
+    image: "./barns-turkish-coffe.jpeg"
   },
   {
     id: "hc-28",
@@ -621,7 +621,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Chocolate", "Kinder"],
     descriptionEn: "A delicious hot Kinder chocolate drink with a creamy texture and sweet, milky chocolate flavour. A comforting treat for anyone who loves the familiar taste of Kinder.",
     descriptionAr: "مشروب كيندر ساخن بنكهة الشوكولاتة الحليبية اللذيذة وقوام كريمي ناعم. مشروب دافئ وممتع لمحبي طعم كيندر المميز.",
-    image: "/images/hot-coffee/hot-kinder.jpg"
+    image: "./hot-kinder.jpeg"
   },
   {
     id: "hc-29",
@@ -640,7 +640,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Chocolate", "Oreo"],
     descriptionEn: "A creamy hot Oreo drink blended with the familiar flavour of Oreo cookies. Rich, sweet and comforting, bringing together smooth milk and delicious chocolate biscuit flavour.",
     descriptionAr: "مشروب أوريو ساخن بقوام كريمي ونكهة بسكويت أوريو المحبوبة. مزيج غني وحلو يجمع بين الحليب الناعم وطعم الشوكولاتة والبسكويت.",
-    image: "/images/hot-coffee/hot-oreo.jpg"
+    image: "./hot-oreo.jpeg"
   },
   {
     id: "hc-30",
@@ -659,7 +659,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Lotus"],
     descriptionEn: "A warm and indulgent Lotus drink featuring the distinctive caramelised biscuit flavour of Lotus Biscoff. Creamy, sweet and full of comforting biscuit goodness.",
     descriptionAr: "مشروب لوتس ساخن بنكهة بسكويت لوتس بيسكوف المميزة بطعم الكراميل. قوام كريمي وحلاوة لذيذة لمحبي نكهة اللوتس.",
-    image: "/images/hot-coffee/hot-lotus.jpg"
+    image: "./hot-lotus.jpeg"
   },
   {
     id: "hc-31",
@@ -678,7 +678,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Chocolate", "Snickers"],
     descriptionEn: "A rich and indulgent hot Snickers drink inspired by the classic chocolate bar. Enjoy a delicious combination of chocolate flavour, caramel sweetness and a creamy finish.",
     descriptionAr: "مشروب سنيكرز ساخن وغني مستوحى من الشوكولاتة الشهيرة. مزيج لذيذ من نكهة الشوكولاتة وحلاوة الكراميل وقوام كريمي.",
-    image: "/images/hot-coffee/hot-snickers.jpg"
+    image: "./hot-snickers.jpeg"
   },
   {
     id: "hc-32",
@@ -697,7 +697,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Matcha"],
     descriptionEn: "Enjoy the distinctive taste of Japanese matcha blended with warm milk. Smooth, creamy and pleasantly earthy, creating a comforting drink with a beautiful green tea aroma.",
     descriptionAr: "استمتع بنكهة الماتشا اليابانية المميزة ممزوجة مع الحليب الساخن. مشروب ناعم وكريمي بنكهة الشاي الأخضر ورائحته العطرية.",
-    image: "/images/hot-coffee/hot-matcha.jpg"
+    image: "./hot-matcha.jpeg"
   },
   {
     id: "hc-33",
@@ -716,7 +716,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Coffee", "Espresso"],
     descriptionEn: "A powerful coffee experience made with three freshly extracted espresso shots. Extra concentrated, intense and full of rich coffee aroma, created for those who want maximum coffee strength.",
     descriptionAr: "تجربة قهوة قوية مع ثلاث جرعات من الإسبريسو المستخلص الطازج. نكهة مركزة وقوية ورائحة قهوة غنية لعشاق الإسبريسو القوي.",
-    image: "/images/hot-coffee/triple-espresso.jpg"
+    image: "./triple-espresso.jpeg"
   },
   {
     id: "hc-34",
@@ -735,7 +735,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Milk", "Traditional"],
     descriptionEn: "A traditional creamy sahlab drink served warm, with a smooth and comforting texture. A delicious winter favourite that brings warmth and sweetness to every sip.",
     descriptionAr: "سحلب تقليدي كريمي يقدم ساخناً بقوام ناعم ومريح. مشروب شتوي لذيذ يمنحك الدفء والحلاوة في كل رشفة.",
-    image: "/images/hot-coffee/sahlab.jpg"
+    image: "./sahlab.jpeg"
   },
   {
     id: "hc-35",
@@ -754,7 +754,7 @@ export const MENU_ITEMS = [
     tags: ["Hot", "Milk", "Ginger"],
     descriptionEn: "A comforting cup of warm milk infused with the distinctive taste of ginger. Smooth, warming and aromatic, making it a lovely choice for a relaxing moment.",
     descriptionAr: "كوب من الحليب الساخن بنكهة الزنجبيل المميزة. مشروب ناعم ودافئ برائحة عطرية، خيار جميل للاستمتاع بلحظة من الراحة.",
-    image: "/images/hot-coffee/ginger-milk.jpg"
+    image: "./ginger-milk.jpeg"
   },
 
   // ==================== COLD DRINKS & MOJITOS (13 Items) ====================
