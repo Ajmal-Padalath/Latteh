@@ -10,6 +10,7 @@ import OrderSuccessModal from './components/OrderSuccessModal';
 import OriginalBoardView from './components/OriginalBoardView';
 
 import { MENU_ITEMS, CATEGORIES, RESTAURANT_INFO } from './data/menuData';
+import { formatPrice } from './utils/formatPrice';
 import { ShoppingBag } from 'lucide-react';
 import './App.css';
 
@@ -248,7 +249,7 @@ export default function App() {
                 {lang === 'ar' ? "سلة الطلب" : "Your Order"} • {totalCartCount} {lang === 'ar' ? "أصناف" : "items"}
               </span>
               <span className="floating-total-price">
-                {totalCartPrice} {lang === 'ar' ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                {formatPrice(totalCartPrice, lang)} {lang === 'ar' ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
               </span>
             </div>
           </div>

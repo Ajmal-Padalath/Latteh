@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Trash2, Plus, Minus, Send, CheckCircle2, ShoppingBag, Store, User } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
+import { formatPrice } from '../utils/formatPrice';
 
 export default function CartDrawer({
   isOpen,
@@ -34,7 +35,7 @@ export default function CartDrawer({
       const sizeTag = item.selectedSize
         ? ` [${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')} / ${item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small')}]`
         : '';
-      message += `${index + 1}. *${item.nameAr} (${item.nameEn})*${sizeTag} x ${item.quantity} = ${item.totalPrice} ر.س\n`;
+      message += `${index + 1}. *${item.nameAr} (${item.nameEn})*${sizeTag} x ${item.quantity} = ${formatPrice(item.totalPrice, lang)} ر.س\n`;
       const extras = [];
       if (item.selectedSize) {
         extras.push(`الحجم: ${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')}`);
@@ -50,7 +51,7 @@ export default function CartDrawer({
     });
 
     message += `------------------------\n`;
-    message += `💰 *الإجمالي الكلي:* ${total} ر.س (شامل الضريبة 15%)\n`;
+    message += `💰 *الإجمالي الكلي:* ${formatPrice(total, lang)} ر.س (شامل الضريبة 15%)\n`;
     message += `شكراً لكم! ✨`;
 
     const encoded = encodeURIComponent(message);
@@ -204,7 +205,7 @@ export default function CartDrawer({
                       </div>
 
                       <div className="cart-item-price">
-                        {item.totalPrice} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                        {formatPrice(item.totalPrice, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
                       </div>
                     </div>
                   </div>
@@ -220,16 +221,16 @@ export default function CartDrawer({
             <div className="price-summary-box">
               <div className="summary-line">
                 <span>{isAr ? "المجموع الفرعي" : "Subtotal"}</span>
-                <span>{subtotal.toFixed(2)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
+                <span>{formatPrice(subtotal.toFixed(2), lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
               </div>
               <div className="summary-line vat-line">
                 <span>{isAr ? "ضريبة القيمة المضافة (15% مشمولة)" : "VAT (15% included)"}</span>
-                <span>{vatAmount.toFixed(2)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
+                <span>{formatPrice(vatAmount.toFixed(2), lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
               </div>
               <div className="summary-line total-line">
                 <span>{isAr ? "المجموع الإجمالي" : "Total Amount"}</span>
                 <span className="total-gold-price">
-                  {total} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                  {formatPrice(total, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
                 </span>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Plus, Minus, Check, Coffee, Droplets, Sparkles, MessageSquare } from 'lucide-react';
 import { CUSTOMIZATION_OPTIONS, RESTAURANT_INFO } from '../data/menuData';
+import { formatPrice } from '../utils/formatPrice';
 
 export default function ItemCustomizerModal({
   item,
@@ -113,7 +114,7 @@ export default function ItemCustomizerModal({
               </span>
             )}
             <span className="price-chip-highlight">
-              {currentBasePrice} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+              {formatPrice(currentBasePrice, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
             </span>
           </div>
 
@@ -142,7 +143,7 @@ export default function ItemCustomizerModal({
                     </div>
                   </div>
                   <div className="size-price-tag">
-                    {priceSmall} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                    {formatPrice(priceSmall, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
                   </div>
                 </button>
 
@@ -163,7 +164,7 @@ export default function ItemCustomizerModal({
                     </div>
                   </div>
                   <div className="size-price-tag">
-                    {priceLarge} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+                    {formatPrice(priceLarge, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
                   </div>
                 </button>
               </div>
@@ -209,7 +210,7 @@ export default function ItemCustomizerModal({
                   >
                     <span>{isAr ? opt.nameAr : opt.nameEn}</span>
                     {opt.price > 0 && (
-                      <span className="extra-price">+{opt.price} {isAr ? "ر.س" : "SAR"}</span>
+                      <span className="extra-price">+{formatPrice(opt.price, lang)} {isAr ? "ر.س" : "SAR"}</span>
                     )}
                   </button>
                 ))}
@@ -262,7 +263,7 @@ export default function ItemCustomizerModal({
                         </span>
                         <span className="addon-title">{isAr ? addon.nameAr : addon.nameEn}</span>
                       </div>
-                      <span className="addon-price">+{addon.price} {isAr ? "ر.س" : "SAR"}</span>
+                      <span className="addon-price">+{formatPrice(addon.price, lang)} {isAr ? "ر.س" : "SAR"}</span>
                     </button>
                   );
                 })}
@@ -310,7 +311,7 @@ export default function ItemCustomizerModal({
               {isAr ? "إضافة إلى الطلب" : "Add to Order"}
             </span>
             <span className="confirm-btn-price">
-              {totalPrice} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
+              {formatPrice(totalPrice, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}
             </span>
           </button>
         </div>

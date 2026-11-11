@@ -1,6 +1,7 @@
 import React from 'react';
 import { MENU_ITEMS } from '../data/menuData';
 import { Sparkles, Coffee, CupSoda, GlassWater, Citrus, Flame, Cake } from 'lucide-react';
+import { formatPrice } from '../utils/formatPrice';
 
 export default function OriginalBoardView({
   onSelectItem,
@@ -83,7 +84,7 @@ export default function OriginalBoardView({
                       }}
                       title={isAr ? "طلب الحجم الصغير" : "Order Small"}
                     >
-                      {item.priceSmall != null ? item.priceSmall : item.price}
+                      {formatPrice(item.priceSmall != null ? item.priceSmall : item.price, lang)}
                     </div>
                     <div 
                       className="board-row-price board-col-lg"
@@ -93,12 +94,12 @@ export default function OriginalBoardView({
                       }}
                       title={isAr ? "طلب الحجم الكبير" : "Order Large"}
                     >
-                      {item.priceLarge != null ? item.priceLarge : item.price}
+                      {formatPrice(item.priceLarge != null ? item.priceLarge : item.price, lang)}
                     </div>
                   </>
                 ) : (
                   <div className="board-row-price">
-                    {item.price}
+                    {formatPrice(item.price, lang)}
                   </div>
                 )}
                 <div className="board-row-name-en">{item.nameEn}</div>

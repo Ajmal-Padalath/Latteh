@@ -1,6 +1,7 @@
 import React from 'react';
 import { Plus, Flame, Sparkles, Check } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
+import { formatPrice } from '../utils/formatPrice';
 
 export default function MenuItemCard({
   item,
@@ -94,8 +95,8 @@ export default function MenuItemCard({
             <div className="price-tag">
               <span className="price-amount">
                 {hasSizes
-                  ? `${item.priceSmall} - ${item.priceLarge}`
-                  : item.price}
+                  ? `${formatPrice(item.priceSmall, lang)} - ${formatPrice(item.priceLarge, lang)}`
+                  : formatPrice(item.price, lang)}
               </span>
               <span className="price-curr">{isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
             </div>

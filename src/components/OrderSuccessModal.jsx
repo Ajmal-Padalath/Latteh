@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import { QRCodeSVG } from 'qrcode.react';
 import { CheckCircle, X, Printer, Store, User, Clock } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
+import { formatPrice } from '../utils/formatPrice';
 
 export default function OrderSuccessModal({
   order,
@@ -77,7 +78,7 @@ export default function OrderSuccessModal({
                     <small className="receipt-subnote">({item.specialNotes})</small>
                   )}
                 </div>
-                <div className="receipt-item-price">{item.totalPrice} ر.س</div>
+                <div className="receipt-item-price">{formatPrice(item.totalPrice, lang)} ر.س</div>
               </div>
             ))}
           </div>
@@ -87,11 +88,11 @@ export default function OrderSuccessModal({
           <div className="receipt-totals-block">
             <div className="receipt-calc-line">
               <span>{isAr ? "شامل ضريبة 15%:" : "VAT 15% Included:"}</span>
-              <span>{order.vatAmount} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
+              <span>{formatPrice(order.vatAmount, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
             </div>
             <div className="receipt-calc-line total-grand">
               <span>{isAr ? "الإجمالي المدفوع:" : "Total Amount:"}</span>
-              <span>{order.total} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
+              <span>{formatPrice(order.total, lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
             </div>
           </div>
 
