@@ -28,7 +28,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filterTag, setFilterTag] = useState('all');
-  const [viewMode, setViewMode] = useState('cards'); // 'cards' | 'board'
+  const [viewMode, setViewMode] = useState('board'); // 'cards' | 'board'
 
   // 4. Cart & Modals
   const [cart, setCart] = useState(() => {
