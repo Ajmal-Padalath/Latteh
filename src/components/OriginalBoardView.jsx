@@ -128,33 +128,6 @@ export default function OriginalBoardView({
 
       {/* 2-Column Exact Layout from the Photo */}
       <div className="board-grid-columns">
-        {/* LEFT COLUMN: Cold Drinks, Fresh Juices, Desserts */}
-        <div className="board-column">
-          {renderSection(
-            "Cold Drinks", 
-            "مشروبات باردة", 
-            coldDrinks, 
-            "cold_drinks", 
-            "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=300&auto=format&fit=crop&q=80"
-          )}
-
-          {renderSection(
-            "Fresh Juices", 
-            "عصائر فريش", 
-            freshJuices, 
-            "fresh_juices", 
-            "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=300&auto=format&fit=crop&q=80"
-          )}
-
-          {renderSection(
-            "Desserts", 
-            "الحلويات", 
-            desserts, 
-            "desserts", 
-            "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&auto=format&fit=crop&q=80"
-          )}
-        </div>
-
         {/* RIGHT COLUMN: Hot Coffee, Tea, Cold Coffee */}
         <div className="board-column">
           {renderSection(
@@ -179,6 +152,32 @@ export default function OriginalBoardView({
             coldCoffee, 
             "cold_coffee", 
             "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=300&auto=format&fit=crop&q=80"
+          )}
+        </div>
+        {/* LEFT COLUMN: Cold Drinks, Fresh Juices, Desserts */}
+        <div className="board-column">
+          {renderSection(
+            "Cold Drinks", 
+            "مشروبات باردة", 
+            coldDrinks, 
+            "cold_drinks", 
+            "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=300&auto=format&fit=crop&q=80"
+          )}
+
+          {renderSection(
+            "Fresh Juices", 
+            "عصائر فريش", 
+            freshJuices, 
+            "fresh_juices", 
+            "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=300&auto=format&fit=crop&q=80"
+          )}
+
+          {renderSection(
+            "Desserts", 
+            "الحلويات", 
+            desserts, 
+            "desserts", 
+            "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&auto=format&fit=crop&q=80"
           )}
         </div>
       </div>
