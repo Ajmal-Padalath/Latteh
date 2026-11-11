@@ -7,9 +7,6 @@ import {
   Check,
   Download,
   Share2,
-  ExternalLink,
-  Sparkles,
-  Smartphone
 } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 
@@ -18,12 +15,14 @@ export default function QrCodeModal({
   onClose,
   lang
 }) {
+  const [copied, setCopied] = useState(false);
+  const [showSocial, setShowSocial] = useState(false);
+  const [qrError, setQrError] = useState('');
+  const qrRef = useRef(null);
+
   if (!isOpen) return null;
 
   const isAr = lang === 'ar';
-  const [copied, setCopied] = useState(false);
-  const [showSocial, setShowSocial] = useState(false);
-  const qrRef = useRef(null);
 
   // Single official store menu URL
   const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:5173';
@@ -36,49 +35,89 @@ export default function QrCodeModal({
     setTimeout(() => setCopied(false), 2200);
   };
 
-  // Convert SVG QR to PNG File for native sharing
-  const getQrFile = async () => {
-    try {
-      const svg = document.getElementById('latteh-store-qr');
-      if (!svg) return null;
-      const svgData = new XMLSerializer().serializeToString(svg);
-      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-      const blobURL = URL.createObjectURL(svgBlob);
+  const getQrSvgData = async () => {
+    const svg = document.getElementById('latteh-store-qr');
+    if (!svg) throw new Error('QR code is not available');
 
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-          const canvas = document.createElement('canvas');
-          canvas.width = 600;
-          canvas.height = 600;
-          const ctx = canvas.getContext('2d');
-          ctx.fillStyle = '#ffffff';
-          ctx.fillRect(0, 0, 600, 600);
-          ctx.drawImage(img, 0, 0, 600, 600);
-          URL.revokeObjectURL(blobURL);
-          canvas.toBlob((blob) => {
-            if (blob) {
-              const file = new File([blob], 'latteh-menu-qr.png', { type: 'image/png' });
-              resolve(file);
-            } else {
-              resolve(null);
-            }
-          }, 'image/png');
-        };
-        img.onerror = () => {
-          URL.revokeObjectURL(blobURL);
-          resolve(null);
-        };
+    const exportedSvg = svg.cloneNode(true);
+    const logo = exportedSvg.querySelector('image');
+    if (!logo) throw new Error('QR code logo is not available');
+
+    const logoPath = logo.getAttribute('href') || logo.getAttribute('xlink:href');
+    if (!logoPath) throw new Error('QR code logo source is missing');
+
+    const response = await fetch(new URL(logoPath, document.baseURI));
+    if (!response.ok) throw new Error('QR code logo could not be loaded');
+
+    const logoUrl = URL.createObjectURL(await response.blob());
+    try {
+      const logoImage = new Image();
+      await new Promise((resolve, reject) => {
+        logoImage.onload = resolve;
+        logoImage.onerror = () => reject(new Error('QR code logo could not be decoded'));
+        logoImage.src = logoUrl;
+      });
+
+      const logoCanvas = document.createElement('canvas');
+      const logoSize = 128;
+      logoCanvas.width = logoSize;
+      logoCanvas.height = logoSize;
+      const logoContext = logoCanvas.getContext('2d');
+      if (!logoContext) throw new Error('Unable to prepare the QR code logo');
+
+      const scale = Math.min(logoSize / logoImage.naturalWidth, logoSize / logoImage.naturalHeight);
+      const width = logoImage.naturalWidth * scale;
+      const height = logoImage.naturalHeight * scale;
+      logoContext.drawImage(logoImage, (logoSize - width) / 2, (logoSize - height) / 2, width, height);
+      logo.setAttribute('href', logoCanvas.toDataURL('image/png'));
+      logo.removeAttribute('xlink:href');
+
+      return new XMLSerializer().serializeToString(exportedSvg);
+    } finally {
+      URL.revokeObjectURL(logoUrl);
+    }
+  };
+
+  // Convert the logo-embedded SVG QR to a PNG file for native sharing.
+  const getQrFile = async () => {
+    const svgData = await getQrSvgData();
+    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    const blobURL = URL.createObjectURL(svgBlob);
+
+    try {
+      const img = new Image();
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = () => reject(new Error('QR code image could not be generated'));
         img.src = blobURL;
       });
-    } catch {
-      return null;
+
+      const canvas = document.createElement('canvas');
+      canvas.width = 600;
+      canvas.height = 600;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) throw new Error('Unable to prepare the QR code image');
+
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+      const blob = await new Promise((resolve, reject) => {
+        canvas.toBlob((result) => {
+          if (result) resolve(result);
+          else reject(new Error('QR code image could not be exported'));
+        }, 'image/png');
+      });
+      return new File([blob], 'latteh-menu-qr.png', { type: 'image/png' });
+    } finally {
+      URL.revokeObjectURL(blobURL);
     }
   };
 
   // Share QR code and link through Web Share API or toggle social buttons
   const handleShare = async () => {
     setShowSocial(true);
+    setQrError('');
 
     const shareTitle = isAr ? 'منيو مقهى لاتيه ليستر | رمز QR' : 'Latteh Leicester Menu | QR Code';
     const shareText = isAr
@@ -104,24 +143,30 @@ export default function QrCodeModal({
           return;
         }
       } catch (err) {
-        // If aborted by user or failed, social icons are already shown as fallback
+        if (err.name !== 'AbortError') {
+          setQrError(isAr ? "تعذر إنشاء رمز QR للمشاركة. يرجى المحاولة مرة أخرى." : "Unable to create the QR code for sharing. Please try again.");
+        }
       }
     }
   };
 
-  // Download SVG QR
-  const handleDownloadQr = () => {
-    const svg = document.getElementById('latteh-store-qr');
-    if (!svg) return;
-    const svgData = new XMLSerializer().serializeToString(svg);
-    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-    const SVGURL = URL.createObjectURL(svgBlob);
-    const downloadLink = document.createElement('a');
-    downloadLink.href = SVGURL;
-    downloadLink.download = 'latteh-cafe-menu-qr.svg';
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+  // Download an SVG QR with the logo embedded so it remains visible outside the page.
+  const handleDownloadQr = async () => {
+    setQrError('');
+    try {
+      const svgData = await getQrSvgData();
+      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+      const SVGURL = URL.createObjectURL(svgBlob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = SVGURL;
+      downloadLink.download = 'latteh-cafe-menu-qr.svg';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      window.setTimeout(() => URL.revokeObjectURL(SVGURL), 1000);
+    } catch {
+      setQrError(isAr ? "تعذر تنزيل رمز QR. يرجى المحاولة مرة أخرى." : "Unable to download the QR code. Please try again.");
+    }
   };
 
   return (
@@ -215,6 +260,7 @@ export default function QrCodeModal({
               <span>{isAr ? "تحميل رمز QR" : "Download QR Code"}</span>
             </button>
           </div>
+          {qrError && <p className="qr-export-error" role="alert">{qrError}</p>}
 
           {/* Social Media Sharing Strip */}
           {showSocial && (
