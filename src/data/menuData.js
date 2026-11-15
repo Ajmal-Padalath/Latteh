@@ -1810,7 +1810,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Fresh", "Lemon", "Mint"],
     descriptionEn: "A refreshing drink made with fresh lemon and mint. It has a bright citrus flavour, a cool minty taste and is served chilled for a refreshing experience.",
     descriptionAr: "مشروب منعش محضر من الليمون الطازج والنعناع. يتميز بنكهة الليمون الحمضية وطعم النعناع المنعش، ويقدم بارداً لمزيد من الانتعاش.",
-    image: "/images/fresh-juices/fresh-lemon-mint.jpg"
+    image: "/juice/fresh-lemon-mint.jpeg"
   },
   {
     id: "fj-2",
@@ -1825,7 +1825,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Smoothie", "Mango", "Fruity"],
     descriptionEn: "A smooth and creamy mango drink with a rich tropical fruit flavour. Served chilled for a sweet and refreshing taste.",
     descriptionAr: "مشروب مانجو ناعم وكريمي بنكهة الفواكه الاستوائية الغنية. يقدم بارداً بطعم حلو ومنعش.",
-    image: "/images/fresh-juices/mango-smoothie.jpg"
+    image: "/juice/mango-smoothie.jpeg"
   },
   {
     id: "fj-3",
@@ -1840,7 +1840,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Fresh", "Orange", "Juice"],
     descriptionEn: "Fresh orange juice with a naturally sweet and tangy citrus flavour. Served chilled for a refreshing fruit drink.",
     descriptionAr: "عصير برتقال طازج يتميز بمذاق الحمضيات الحلو والمنعش. يقدم بارداً للاستمتاع بمشروب فواكه منعش.",
-    image: "/images/fresh-juices/fresh-orange-juice.jpg"
+    image: "/juice/fresh-orange-juice.jpeg"
   },
   {
     id: "fj-4",
@@ -1855,7 +1855,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Avocado", "Creamy", "Smoothie"],
     descriptionEn: "A rich and creamy avocado drink with a smooth texture and mild flavour. Served chilled for a satisfying drink.",
     descriptionAr: "مشروب أفوكادو غني وكريمي بقوام ناعم ونكهة خفيفة. يقدم بارداً للاستمتاع بمشروب لذيذ.",
-    image: "/images/fresh-juices/avocado-delight.jpg"
+    image: "/juice/avocado-delight.jpeg"
   },
   {
     id: "fj-5",
@@ -1870,7 +1870,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Cocktail", "Fruity", "Mixed Fruit"],
     descriptionEn: "A colourful fruit cocktail with a combination of fruity flavours. Served chilled for a refreshing and enjoyable taste.",
     descriptionAr: "كوكتيل فواكه غني بمجموعة من نكهات الفواكه المتنوعة. يقدم بارداً بطعم منعش ولذيذ.",
-    image: "/images/fresh-juices/royal-cocktail.jpg"
+    image: "/juice/royal-cocktail.jpeg"
   },
   {
     id: "fj-6",
@@ -1885,7 +1885,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Signature", "Special", "Fruity"],
     descriptionEn: "Our signature Awar Qalb drink, offering a distinctive fruity taste and a refreshing chilled experience.",
     descriptionAr: "مشروب عوار قلب المميز لدينا، يتميز بمذاق فواكه خاص وتجربة منعشة يقدم بارداً.",
-    image: "/images/fresh-juices/awar-qalb-signature.jpg"
+    image: "/juice/awhar-qalb-signature.jpeg"
   },
   {
     id: "fj-7",
@@ -1900,7 +1900,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Smoothie", "Strawberry", "Fruity"],
     descriptionEn: "A smooth strawberry drink with a sweet fruity flavour and creamy texture. Served chilled for a refreshing treat.",
     descriptionAr: "مشروب فراولة ناعم بنكهة فواكه حلوة وقوام كريمي. يقدم بارداً للاستمتاع بمذاق منعش.",
-    image: "/images/fresh-juices/strawberry-smoothie.jpg"
+    image: "/juice/strawberry-smoothie.jpeg"
   },
   {
     id: "fj-8",
@@ -1915,7 +1915,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Smoothie", "Guava", "Fruity"],
     descriptionEn: "A smooth and creamy guava drink with a sweet tropical fruit flavour. Served chilled for a refreshing taste.",
     descriptionAr: "مشروب جوافة ناعم وكريمي بنكهة فواكه استوائية حلوة. يقدم بارداً لمذاق منعش.",
-    image: "/images/fresh-juices/guava-smoothie.jpg"
+    image: "/juice/guava-smoothie.jpeg"
   },
   {
     id: "fj-9",
@@ -1930,7 +1930,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Fresh", "Pineapple", "Juice"],
     descriptionEn: "A refreshing pineapple juice with a naturally sweet and tangy tropical flavour. Served chilled.",
     descriptionAr: "عصير أناناس منعش بنكهة استوائية تجمع بين الحلاوة والحموضة الطبيعية. يقدم بارداً.",
-    image: "/images/fresh-juices/pineapple-juice.jpg"
+    image: "/juice/pineapple-juice.jpeg"
   },
   {
     id: "fj-10",
@@ -1945,7 +1945,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mango", "Strawberry", "Fruit Fusion"],
     descriptionEn: "A fruity combination of mango and strawberry flavours. Enjoy the sweet tropical taste with a refreshing chilled finish.",
     descriptionAr: "مزيج من نكهة المانجو والفراولة. يجمع بين الطعم الاستوائي الحلو والانتعاش عند تقديمه بارداً.",
-    image: "/images/fresh-juices/mango-strawberry-fusion.jpg"
+    image: "/juice/mango-strawberry-fusion.jpeg"
   },
   {
     id: "fj-11",
@@ -1960,7 +1960,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Special", "Fruity", "Signature Style"],
     descriptionEn: "A special Esfahani drink with a distinctive fruity character. Served chilled for a delicious and refreshing experience.",
     descriptionAr: "مشروب أصفهاني خاص بطابع فاكهي مميز. يقدم بارداً لتجربة لذيذة ومنعشة.",
-    image: "/images/fresh-juices/esfahani-special.jpg"
+    image: "/juice/esfahani-special.jpeg"
   },
   {
     id: "fj-12",
@@ -1975,7 +1975,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mixed Berry", "Berries", "Fruit Fusion"],
     descriptionEn: "A refreshing blend of mixed berry flavours with a sweet and slightly tangy taste. Served chilled.",
     descriptionAr: "مزيج منعش من نكهات التوت المتنوعة بطعم حلو مع لمسة من الحموضة. يقدم بارداً.",
-    image: "/images/fresh-juices/mixed-berry-fusion.jpg"
+    image: "/juice/mixed-berry-fusion.jpeg"
   },
   {
     id: "fj-13",
@@ -1990,7 +1990,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Smoothie", "Banana", "Creamy"],
     descriptionEn: "A smooth and creamy banana drink with a naturally sweet flavour. Served chilled for a satisfying and refreshing taste.",
     descriptionAr: "مشروب موز ناعم وكريمي يتميز بحلاوته الطبيعية. يقدم بارداً بمذاق لذيذ ومنعش.",
-    image: "/images/fresh-juices/banana-smoothie.jpg"
+    image: "/juice/banana-smoothie.jpeg"
   },
   {
     id: "fj-14",
@@ -2005,7 +2005,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Smoothie", "Coconut", "Creamy"],
     descriptionEn: "A creamy coconut drink with a smooth texture and tropical flavour. Served chilled for a refreshing experience.",
     descriptionAr: "مشروب جوز هند كريمي بقوام ناعم ونكهة استوائية. يقدم بارداً لتجربة منعشة.",
-    image: "/images/fresh-juices/coconut-smoothie.jpg"
+    image: "/juice/coconut-smoothie.jpeg"
   },
   {
     id: "fj-15",
@@ -2020,7 +2020,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Strawberry", "Banana", "Fruit Fusion"],
     descriptionEn: "A delicious combination of strawberry and banana flavours with a smooth fruity taste. Served chilled.",
     descriptionAr: "مزيج لذيذ من نكهة الفراولة والموز بطعم فاكهي ناعم. يقدم بارداً.",
-    image: "/images/fresh-juices/strawberry-banana-fusion.jpg"
+    image: "/juice/strawberry-banana-fusion.jpeg"
   },
   {
     id: "fj-16",
@@ -2035,7 +2035,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Pineapple", "Mint", "Cooler"],
     descriptionEn: "A refreshing combination of pineapple and mint flavours. Served chilled with a fruity taste and cool mint finish.",
     descriptionAr: "مزيج منعش من نكهة الأناناس والنعناع. يقدم بارداً بطعم فاكهي ولمسة نعناع منعشة.",
-    image: "/images/fresh-juices/pineapple-mint-cooler.jpg"
+    image: "/juice/pineapple-mint-cooler.jpeg"
   },
   {
     id: "fj-17",
@@ -2050,7 +2050,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mango", "Chikoo", "Fruit Fusion"],
     descriptionEn: "A fruity blend of mango and chikoo flavours with a naturally sweet taste. Served chilled for a smooth and refreshing drink.",
     descriptionAr: "مزيج فاكهي من نكهة المانجو والشيكو بطعم حلو طبيعي. يقدم بارداً كمشروب ناعم ومنعش.",
-    image: "/images/fresh-juices/mango-chikoo-fusion.jpg"
+    image: "/juice/mango-chikoo-fusion.jpeg"
   },
   {
     id: "fj-18",
@@ -2065,7 +2065,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Pineapple", "Coconut", "Fruit Fusion"],
     descriptionEn: "A tropical combination of pineapple and coconut flavours. Served chilled with a smooth and refreshing taste.",
     descriptionAr: "مزيج استوائي من نكهة الأناناس وجوز الهند. يقدم بارداً بمذاق ناعم ومنعش.",
-    image: "/images/fresh-juices/pineapple-coconut-fusion.jpg"
+    image: "/juice/pineapple-coconut-fusion.jpeg"
   },
   {
     id: "fj-19",
@@ -2080,7 +2080,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Smoothie", "Chikoo", "Fruity"],
     descriptionEn: "A smooth and creamy chikoo drink with a naturally sweet fruit flavour. Served chilled for a rich and refreshing taste.",
     descriptionAr: "مشروب شيكو ناعم وكريمي بنكهة فاكهية حلوة بطبيعتها. يقدم بارداً بمذاق غني ومنعش.",
-    image: "/images/fresh-juices/chikoo-smoothie.jpg"
+    image: "/juice/chikoo-smoothie.jpeg"
   },
   {
     id: "fj-20",
@@ -2095,7 +2095,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mango", "Guava", "Fruit Fusion"],
     descriptionEn: "A fruity combination of mango and guava flavours with a sweet tropical taste. Served chilled for a refreshing experience.",
     descriptionAr: "مزيج فاكهي من نكهة المانجو والجوافة بطعم استوائي حلو. يقدم بارداً لتجربة منعشة.",
-    image: "/images/fresh-juices/mango-guava-fusion.jpg"
+    image: "/juice/mango-guava-fusion.jpeg"
   },
 
   // ==================== DESSERTS (13 Items) ====================
