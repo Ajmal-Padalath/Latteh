@@ -1433,7 +1433,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Slush", "Fruity"],
     descriptionEn: "A refreshing ice-blended drink with a sweet fruity flavour and a smooth, icy texture. Perfect for cooling down on a hot day.",
     descriptionAr: "مشروب مثلج ومنعش بنكهة فاكهية حلوة وقوام ناعم ومثلج. مثالي للاستمتاع بالانتعاش في الأجواء الحارة.",
-    image: "/images/cold-drinks/slash-red.jpg"
+    image: "./cold-drinks/slash-red.jpeg"
   },
   {
     id: "cd-2",
@@ -1448,7 +1448,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Slush", "Fruity"],
     descriptionEn: "A cool and refreshing ice-blended drink with a sweet fruity flavour and a vibrant blue colour. A delicious treat for a refreshing break.",
     descriptionAr: "مشروب مثلج ومنعش بلونه الأزرق الجذاب ونكهته الفاكهية الحلوة. خيار لذيذ للاستمتاع بمشروب بارد ومنعش.",
-    image: "/images/cold-drinks/slash-blue.jpg"
+    image: "./cold-drinks/slash-blue.jpeg"
   },
   {
     id: "cd-3",
@@ -1463,7 +1463,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Juice", "Hibiscus"],
     descriptionEn: "A refreshing chilled hibiscus drink with a distinctive floral taste and a beautiful deep-red colour. Light, flavourful and perfect for a refreshing moment.",
     descriptionAr: "عصير كركديه بارد ومنعش بلونه الأحمر الجميل ونكهته العطرية المميزة. مشروب خفيف ولذيذ يناسب أوقات الانتعاش.",
-    image: "/images/cold-drinks/hibiscus-juice.jpg"
+    image: "./cold-drinks/hibiscus-juice.jpeg"
   },
   {
     id: "cd-4",
@@ -1478,7 +1478,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Refreshing", "Blue"],
     descriptionEn: "A colourful blue drink with a sweet taste and a refreshing citrus touch. Served chilled for a cool and enjoyable drinking experience.",
     descriptionAr: "مشروب أزرق بلون جذاب وطعم حلو مع لمسة حمضية منعشة. يقدم بارداً لتستمتع بمذاق لذيذ ومنعش.",
-    image: "/images/cold-drinks/blue-lagoon.jpg"
+    image: "./cold-drinks/blue-lagoon.jpeg"
   },
   {
     id: "cd-5",
@@ -1493,7 +1493,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Refreshing", "Fruity"],
     descriptionEn: "A refreshing cold drink with an attractive red colour and a delicious fruity taste. A lovely choice for anyone looking for something cool and flavourful.",
     descriptionAr: "مشروب بارد ومنعش بلون أحمر جذاب وطعم فاكهي لذيذ. خيار رائع لمحبي المشروبات الباردة والمنعشة.",
-    image: "/images/cold-drinks/red-flat.jpg"
+    image: "./cold-drinks/red-flat.jpeg"
   },
   {
     id: "cd-6",
@@ -1508,7 +1508,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mix", "Refreshing"],
     descriptionEn: "A chilled Rita Mix with a delicious combination of flavours and a refreshing taste. A cool and enjoyable drink for any time of the day.",
     descriptionAr: "ريتا مخلوط يقدم بارداً بمزيج لذيذ من النكهات وطعم منعش. مشروب بارد وممتع يناسب أي وقت من اليوم.",
-    image: "/images/cold-drinks/rita-mix.jpg"
+    image: "./cold-drinks/rita-mix.jpeg"
   },
   {
     id: "cd-7",
@@ -1523,7 +1523,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mix", "Energy"],
     descriptionEn: "A refreshing Code Red Mix served chilled with a distinctive fruity taste. A delicious combination for those who enjoy cold mixed drinks.",
     descriptionAr: "كود رد مخلوط يقدم بارداً بنكهة فاكهية مميزة وطعم لذيذ. خيار منعش لمحبي المشروبات الباردة المخلوطة.",
-    image: "/images/cold-drinks/code-red-mix.jpg"
+    image: "./cold-drinks/code-red-mix.jpeg"
   },
   {
     id: "cd-8",
@@ -1538,7 +1538,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mix", "Energy"],
     descriptionEn: "A chilled Bison Mix with a delicious blend of flavours and a refreshing finish. A great choice for enjoying a cool mixed drink.",
     descriptionAr: "بايسن مخلوط يقدم بارداً بمزيج لذيذ من النكهات ونهاية منعشة. خيار رائع لمحبي المشروبات المخلوطة والباردة.",
-    image: "/images/cold-drinks/bison-mix.jpg"
+    image: "./cold-drinks/bison-mix.jpeg"
   },
   {
     id: "cd-9",
@@ -1553,7 +1553,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mix", "Energy"],
     descriptionEn: "A refreshing Power Horse Mix served chilled with a distinctive taste and a delicious blend of flavours. Perfect for those who enjoy mixed energy drinks.",
     descriptionAr: "باور هورس مخلوط يقدم بارداً بمذاقه المميز ومزيج لذيذ من النكهات. خيار منعش لمحبي مشروبات الطاقة المخلوطة.",
-    image: "/images/cold-drinks/power-horse-mix.jpg"
+    image: "./cold-drinks/power-horse-mix.jpeg"
   },
   {
     id: "cd-10",
@@ -1568,7 +1568,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mix", "Energy"],
     descriptionEn: "A chilled Red Bull Mix with a delicious combination of flavours and a refreshing taste. A colourful and enjoyable choice for energy drink lovers.",
     descriptionAr: "ريد بول مخلوط يقدم بارداً بمزيج لذيذ من النكهات وطعم منعش. خيار مميز لمحبي مشروبات الطاقة المخلوطة.",
-    image: "/images/cold-drinks/red-bull-mix.jpg"
+    image: "./cold-drinks/red-bull-mix.jpeg"
   },
   {
     id: "cd-11",
@@ -1583,7 +1583,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mojito", "Strawberry"],
     descriptionEn: "A refreshing strawberry mojito with a sweet strawberry flavour and a cool citrus touch. A delicious fruity drink served chilled for a refreshing experience.",
     descriptionAr: "موهيتو فراولة منعش يجمع بين نكهة الفراولة الحلوة ولمسة حمضية باردة. مشروب فاكهي لذيذ يقدم بارداً لمزيد من الانتعاش.",
-    image: "/images/cold-drinks/strawberry-mojito.jpg"
+    image: "./cold-drinks/strawberry-mojito.jpeg"
   },
   {
     id: "cd-12",
@@ -1598,7 +1598,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mojito", "Blueberry"],
     descriptionEn: "A delicious blueberry mojito with a sweet berry flavour and a refreshing citrus touch. Served chilled for a smooth and fruity refreshment.",
     descriptionAr: "موهيتو توت أزرق بنكهة التوت الحلوة ولمسة حمضية منعشة. يقدم بارداً ليمنحك مذاقاً فاكهياً لذيذاً ومنعشاً.",
-    image: "/images/cold-drinks/blueberry-mojito.jpg"
+    image: "./cold-drinks/blueberry-mojito.jpeg"
   },
   {
     id: "cd-13",
@@ -1613,7 +1613,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mojito", "Raspberry"],
     descriptionEn: "A refreshing raspberry mojito with a sweet and slightly tangy berry flavour. A chilled fruity drink with a delicious balance of sweetness and freshness.",
     descriptionAr: "موهيتو توت أحمر منعش بنكهة حلوة مع لمسة حموضة خفيفة. مشروب فاكهي بارد يجمع بين الحلاوة والانتعاش.",
-    image: "/images/cold-drinks/raspberry-mojito.jpg"
+    image: "./cold-drinks/raspberry-mojito.jpeg"
   },
   {
     id: "cd-14",
@@ -1628,7 +1628,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mojito", "Blackberry"],
     descriptionEn: "A delicious blackberry mojito with a rich berry flavour and a refreshing citrus touch. Served chilled for a fruity and enjoyable drink.",
     descriptionAr: "موهيتو توت أسود بنكهة توت غنية ولمسة حمضية منعشة. يقدم بارداً ليمنحك مشروباً فاكهياً لذيذاً وممتعاً.",
-    image: "/images/cold-drinks/blackberry-mojito.jpg"
+    image: "./cold-drinks/blackberry-mojito.jpeg"
   },
   {
     id: "cd-15",
@@ -1643,7 +1643,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Mojito", "Watermelon"],
     descriptionEn: "A refreshing watermelon mojito with a sweet and juicy fruity taste. A cool and delicious drink that is perfect for warm days.",
     descriptionAr: "موهيتو بطيخ منعش بطعم حلو وفاكهي يشبه نكهة البطيخ اللذيذ. مشروب بارد ومميز يناسب الأجواء الحارة.",
-    image: "/images/cold-drinks/watermelon-mojito.jpg"
+    image: "./cold-drinks/watermelon-mojito.jpeg"
   },
   {
     id: "cd-16",
@@ -1658,7 +1658,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Lemonade", "Strawberry"],
     descriptionEn: "A refreshing strawberry lemonade combining sweet strawberry flavour with a fresh citrus taste. A delicious balance of fruity sweetness and light tanginess, served chilled.",
     descriptionAr: "ليمونادة فراولة تجمع بين حلاوة الفراولة ونكهة الليمون المنعشة. مزيج لذيذ ومتوازن بين الطعم الحلو والحموضة الخفيفة، يقدم بارداً.",
-    image: "/images/cold-drinks/strawberry-lemonade.jpg"
+    image: "./cold-drinks/strawberry-lemonade.jpeg"
   },
   {
     id: "cd-17",
@@ -1673,7 +1673,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Lemonade", "Blueberry"],
     descriptionEn: "A delicious blueberry lemonade with a fruity berry flavour and a refreshing lemon taste. Sweet, slightly tangy and perfect for enjoying chilled.",
     descriptionAr: "ليمونادة توت أزرق بنكهة التوت الفاكهية وطعم الليمون المنعش. مشروب حلو مع حموضة خفيفة، مثالي للاستمتاع به بارداً.",
-    image: "/images/cold-drinks/blueberry-lemonade.jpg"
+    image: "./cold-drinks/blueberry-lemonade.jpeg"
   },
   {
     id: "cd-18",
@@ -1688,7 +1688,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Lemonade", "Raspberry"],
     descriptionEn: "A refreshing raspberry lemonade with a sweet berry flavour and a bright citrus finish. A chilled drink that offers a lovely balance of sweetness and tanginess.",
     descriptionAr: "ليمونادة توت أحمر منعشة بنكهة التوت الحلوة ولمسة ليمون حمضية. مشروب بارد يجمع بين الحلاوة والحموضة بطريقة لذيذة.",
-    image: "/images/cold-drinks/raspberry-lemonade.jpg"
+    image: "./cold-drinks/raspberry-lemonade.jpeg"
   },
   {
     id: "cd-19",
@@ -1703,7 +1703,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Lemonade", "Watermelon"],
     descriptionEn: "A refreshing watermelon lemonade with a sweet fruity taste and a fresh citrus touch. A cool and delicious drink for warm and sunny days.",
     descriptionAr: "ليمونادة بطيخ منعشة بطعم فاكهي حلو ولمسة ليمون منعشة. مشروب بارد ولذيذ يناسب الأيام الدافئة والمشمسة.",
-    image: "/images/cold-drinks/watermelon-lemonade.jpg"
+    image: "./cold-drinks/watermelon-lemonade.jpeg"
   },
   {
     id: "cd-20",
@@ -1718,7 +1718,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Lemonade", "Passion Fruit"],
     descriptionEn: "A tropical passion fruit lemonade with a distinctive fruity flavour and a refreshing citrus taste. Sweet, slightly tangy and delicious when served chilled.",
     descriptionAr: "ليمونادة باشن فروت بنكهة استوائية فاكهية مميزة وطعم ليمون منعش. مشروب حلو مع حموضة خفيفة، يقدم بارداً ولذيذاً.",
-    image: "/images/cold-drinks/passion-fruit-lemonade.jpg"
+    image: "./cold-drinks/passion-fruit-lemonade.jpeg"
   },
   {
     id: "cd-21",
@@ -1733,7 +1733,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Iced Tea", "Peach"],
     descriptionEn: "A smooth and refreshing iced tea with a sweet peach flavour and a light fruity aroma. Served chilled for a relaxing and refreshing drink.",
     descriptionAr: "آيس تي منعش بنكهة الخوخ الحلوة ورائحة فاكهية خفيفة. يقدم بارداً ليمنحك مشروباً لطيفاً ومنعشاً.",
-    image: "/images/cold-drinks/iced-tea-peach.jpg"
+    image: "./cold-drinks/iced-tea-peach.jpeg"
   },
   {
     id: "cd-22",
@@ -1748,7 +1748,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Iced Tea", "Berry"],
     descriptionEn: "A refreshing iced tea with a delicious mixed berry flavour and a smooth, light taste. A chilled fruity drink that is enjoyable at any time of the day.",
     descriptionAr: "آيس تي منعش بنكهة التوت اللذيذة وطعم خفيف وناعم. مشروب فاكهي بارد يمكنك الاستمتاع به في أي وقت من اليوم.",
-    image: "/images/cold-drinks/iced-tea-berry.jpg"
+    image: "./cold-drinks/iced-tea-berry.jpeg"
   },
   {
     id: "cd-23",
@@ -1763,7 +1763,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Iced Tea", "Strawberry"],
     descriptionEn: "A refreshing iced tea with a sweet strawberry flavour and a smooth, fruity taste. Served chilled for a delicious and cooling experience.",
     descriptionAr: "آيس تي منعش بنكهة الفراولة الحلوة وطعم فاكهي ناعم. يقدم بارداً لتستمتع بمذاق لذيذ وإحساس منعش.",
-    image: "/images/cold-drinks/iced-tea-strawberry.jpg"
+    image: "./cold-drinks/iced-tea-strawberry.jpeg"
   },
   {
     id: "cd-24",
@@ -1778,7 +1778,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Iced Tea", "Passion Fruit"],
     descriptionEn: "A tropical iced tea with a distinctive passion fruit flavour and a refreshing fruity taste. Light, delicious and served chilled for extra refreshment.",
     descriptionAr: "آيس تي بنكهة الباشن فروت الاستوائية المميزة وطعم فاكهي منعش. مشروب خفيف ولذيذ يقدم بارداً لمزيد من الانتعاش.",
-    image: "/images/cold-drinks/iced-tea-passion-fruit.jpg"
+    image: "./cold-drinks/iced-tea-passion-fruit.jpeg"
   },
   {
     id: "cd-25",
@@ -1793,7 +1793,7 @@ export const MENU_ITEMS = [
     tags: ["Cold", "Iced Tea", "Mixed Fruit"],
     descriptionEn: "A refreshing iced tea with a delicious blend of fruity flavours. Colourful, smooth and served chilled, making it a lovely choice for fruit and iced tea lovers.",
     descriptionAr: "آيس تي منعش بمزيج لذيذ من نكهات الفواكه المتنوعة. مشروب ملون وناعم يقدم بارداً، وهو خيار رائع لمحبي الفواكه والشاي المثلج.",
-    image: "/images/cold-drinks/mixed-fruit-iced-tea.jpg"
+    image: "./cold-drinks/mixed-fruit-iced-tea.jpeg"
   },
 
   // ==================== FRESH JUICES (7 Items) ====================
