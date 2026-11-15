@@ -124,14 +124,14 @@ export default function Header({
                 <span>{isAr ? "رمز QR الخاص بالمنيو" : "Store Menu QR Code"}</span>
               </button>
 
-              <button
+              {/* <button
                 className={`secondary-action-btn ${viewMode === 'board' ? 'btn-active-gold' : ''}`}
                 onClick={() => setViewMode(viewMode === 'board' ? 'cards' : 'board')}
                 title={isAr ? "عرض لوحة المنيو الأصلية" : "Original Board View"}
               >
                 <Layers size={17} />
                 <span>{viewMode === 'board' ? (isAr ? "عرض البطاقات الحديث" : "Modern Cards") : (isAr ? "لوحة المنيو الأصلية" : "Original Board")}</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
