@@ -775,7 +775,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Milk Tea", "Popular", "Bestseller", "Signature"],
     descriptionEn: "Enjoy our rich and traditional Karak Tea, prepared with strong brewed tea, creamy milk and a carefully balanced blend of aromatic spices. A comforting cup with a bold flavour and smooth, creamy finish.",
     descriptionAr: "استمتع بشاي الكرك الغني بطعمه المعروف، محضر من الشاي القوي والحليب ومزيج متوازن من البهارات العطرية. كوب دافئ بقوام كريمي ونكهة مميزة.",
-    image: "/images/tea/karak-tea.jpg"
+    image: "./tea/karak-tea.jpeg"
   },
   {
     id: "t-2",
@@ -794,7 +794,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Classic", "Popular", "Bestseller", "Signature"],
     descriptionEn: "A simple and refreshing cup of freshly brewed tea with a familiar aroma and clean, classic taste. Perfect for enjoying throughout the day.",
     descriptionAr: "شاي عادي محضر طازج بطعمه المعروف ورائحته المميزة. كوب بسيط وخفيف يناسب أي وقت من اليوم.",
-    image: "/images/tea/tea.jpg"
+    image: "./tea/tea.jpeg"
   },
   {
     id: "t-3",
@@ -813,7 +813,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Milk", "Popular", "Bestseller", "Signature"],
     descriptionEn: "A smooth and comforting milk tea made with freshly brewed tea and creamy milk. Balanced in flavour with a gentle sweetness and a rich, satisfying finish.",
     descriptionAr: "شاي بالحليب بطعم ناعم ومتوازن، محضر من الشاي الطازج والحليب الكريمي. مشروب دافئ ولذيذ بنكهة خفيفة ومريحة.",
-    image: "/images/tea/milk-tea.jpg"
+    image: "./tea/milk-tea.jpeg"
   },
   {
     id: "t-4",
@@ -832,7 +832,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Mint", "Popular", "Bestseller", "Signature"],
     descriptionEn: "A refreshing cup of freshly brewed tea infused with the cool, aromatic flavour of mint. Light, soothing and enjoyable with a fresh finish.",
     descriptionAr: "شاي طازج بنكهة النعناع المنعشة ورائحته العطرية. خفيف ولذيذ ويترك طعماً منعشاً في كل رشفة.",
-    image: "/images/tea/mint-tea.jpg"
+    image: "./tea/mint-tea.jpeg"
   },
   {
     id: "t-5",
@@ -851,7 +851,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Moroccan", "Mint", "Bestseller"],
     descriptionEn: "Enjoy the refreshing Moroccan-style tea with its distinctive aroma and traditional character. A beautifully brewed cup offering a light, refreshing taste and a pleasant finish.",
     descriptionAr: "استمتع بالشاي المغربي بطعمه التقليدي ورائحته المميزة. كوب شاي منعش وخفيف بنكهة جميلة يناسب محبي الشاي المغربي.",
-    image: "/images/tea/moroccan-tea.jpg"
+    image: "./tea/moroccan-tea.jpeg"
   },
   {
     id: "t-6",
@@ -870,7 +870,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "English", "Popular"],
     descriptionEn: "A classic English-style tea with a rich aroma and smooth, familiar flavour. Carefully brewed and served hot for a relaxing tea moment.",
     descriptionAr: "شاي إنجليزي كلاسيكي برائحة غنية وطعم ناعم ومعروف. محضر بعناية ويقدم ساخناً للاستمتاع بكوب شاي مريح.",
-    image: "/images/tea/english-tea.jpg"
+    image: "./tea/english-tea.jpeg"
   },
   {
     id: "t-7",
@@ -889,7 +889,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Ginger"],
     descriptionEn: "A warm and aromatic tea infused with the distinctive flavour of ginger. Light and comforting, with a pleasant spicy note in every sip.",
     descriptionAr: "شاي دافئ بنكهة الزنجبيل المميزة ورائحته العطرية. خفيف ومريح مع لمسة زنجبيل لذيذة في كل رشفة.",
-    image: "/images/tea/ginger-tea.jpg"
+    image: "./tea/ginger-tea.jpeg"
   },
   {
     id: "t-8",
@@ -908,7 +908,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Cinnamon"],
     descriptionEn: "A comforting cup of tea infused with the warm and aromatic flavour of cinnamon. Light, fragrant and enjoyable, with a gentle spiced finish.",
     descriptionAr: "شاي دافئ بنكهة القرفة العطرية والمميزة. خفيف ولذيذ برائحة جميلة ولمسة من القرفة في كل رشفة.",
-    image: "/images/tea/cinnamon-tea.jpg"
+    image: "./tea/cinnamon-tea.jpeg"
   },
   {
     id: "t-9",
@@ -927,7 +927,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Green Tea", "Popular"],
     descriptionEn: "A light and refreshing green tea with a delicate aroma and smooth, clean taste. A simple choice for those who enjoy the distinctive flavour of green tea.",
     descriptionAr: "شاي أخضر خفيف ومنعش برائحة ناعمة وطعم متوازن. خيار بسيط ولذيذ لمحبي نكهة الشاي الأخضر.",
-    image: "/images/tea/english-green-tea.jpg"
+    image: "./tea/english-green-tea.jpeg"
   },
   {
     id: "t-10",
@@ -946,7 +946,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Anise", "Herbal"],
     descriptionEn: "A warm herbal infusion prepared with aromatic anise. Naturally fragrant and light, with a distinctive sweet and soothing flavour.",
     descriptionAr: "مشروب يانسون دافئ برائحة عطرية وطعم حلو وخفيف. خيار لطيف لمحبي المشروبات العشبية الدافئة.",
-    image: "/images/tea/anise-tea.jpg"
+    image: "./tea/anise-tea.jpeg"
   },
   {
     id: "t-11",
@@ -965,7 +965,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Chamomile", "Herbal"],
     descriptionEn: "A delicate herbal tea made with fragrant chamomile. Light and soothing, with a gentle floral aroma and a smooth, relaxing taste.",
     descriptionAr: "شاي بابونج برائحة زهرية ناعمة وطعم خفيف ومميز. مشروب عشبي دافئ لمحبي النكهات الهادئة.",
-    image: "/images/tea/chamomile-tea.jpg"
+    image: "./tea/chamomile-tea.jpeg"
   },
   {
     id: "t-12",
@@ -984,7 +984,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Lemon", "Citrus", "Signature"],
     descriptionEn: "A refreshing cup of tea with a bright lemon flavour and a pleasant citrus aroma. Light, smooth and enjoyable, with a fresh and tangy finish.",
     descriptionAr: "شاي بنكهة الليمون المنعشة ورائحته الحمضية الجميلة. خفيف وناعم بطعم منعش ولمسة ليمون مميزة.",
-    image: "/images/tea/lemon-tea.jpg"
+    image: "./tea/lemon-tea.jpeg"
   },
   {
     id: "t-13",
@@ -1003,7 +1003,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Traditional", "Signature"],
     descriptionEn: "A traditional brewed tea prepared in the familiar Talqimah style. Enjoy its classic tea aroma and comforting taste, served hot for a simple and satisfying experience.",
     descriptionAr: "شاي تلقيمة بطريقته التقليدية وطعمه المعروف. يتم تحضيره وتقديمه ساخناً برائحة الشاي المميزة ونكهته المحبوبة.",
-    image: "/images/tea/talqimah-tea.jpg"
+    image: "./tea/talqimah-tea.jpeg"
   },
   {
     id: "t-14",
@@ -1022,7 +1022,7 @@ export const MENU_ITEMS = [
     tags: ["Tea", "Hot", "Tea Pot", "Sharing"],
     descriptionEn: "A generously served pot of freshly brewed tea, perfect for sharing. Enjoy multiple cups of warm, freshly prepared tea with family and friends.",
     descriptionAr: "إبريق شاي كبير محضر طازج ويقدم للمشاركة. مناسب للاستمتاع بأكثر من كوب شاي ساخن مع الأهل والأصدقاء.",
-    image: "/images/tea/big-tea-pot.jpg"
+    image: "./tea/big-tea-pot.jpeg"
   },
   {
     id: "t-15",
@@ -1041,7 +1041,7 @@ export const MENU_ITEMS = [
     tags: ["Arabic Coffee", "Hot", "Traditional", "Dallah", "Sharing"],
     descriptionEn: "A traditional Arabic coffee dallah prepared for sharing. Enjoy the familiar aroma and authentic taste of Arabic coffee, served in a generous quantity for family and guests.",
     descriptionAr: "دلة قهوة عربية تقليدية تقدم للمشاركة. استمتع برائحة القهوة العربية وطعمها الأصيل بكمية مناسبة للعائلة والضيوف.",
-    image: "/images/tea/arabic-coffee-dallah.jpg"
+    image: "./tea/arabic-coffee-dallah.jpeg"
   },
   // ==================== COLD COFFEE (13 Items) ====================
   {
