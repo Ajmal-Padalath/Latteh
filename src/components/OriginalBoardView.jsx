@@ -71,7 +71,7 @@ export default function OriginalBoardView({
               <div 
                 key={item.id} 
                 className={`board-row-item ${hasSizes ? 'has-sizes' : 'single-price'}`}
-                onClick={() => onSelectItem(item)}
+                // onClick={() => onSelectItem(item)}
                 title="Click to customize and order"
               >
                 {hasSizes ? (
