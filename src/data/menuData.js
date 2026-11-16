@@ -1057,7 +1057,7 @@ export const MENU_ITEMS = [
     tags: ["popular"],
     descriptionEn: "A refreshing iced coffee made with rich espresso and cold water, served over ice.",
     descriptionAr: "قهوة باردة منعشة محضّرة بالإسبريسو الغني والماء البارد، وتُقدّم مع الثلج.",
-    image: "/images/cold-coffee/iced-americano.jpg"
+    image: "./cold-coffee/iced-americano.jpeg"
   },
   {
     id: "cc-2",
@@ -1072,7 +1072,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller", "signature"],
     descriptionEn: "Our coffee of the day, freshly brewed and served chilled for a smooth and refreshing taste.",
     descriptionAr: "قهوة اليوم المحضّرة طازجة، تُقدّم باردة بطعم ناعم ومنعش.",
-    image: "/images/cold-coffee/iced-coffee-of-the-day.jpg"
+    image: "./cold-coffee/iced-coffee-of-the-day.jpeg"
   },
   {
     id: "cc-3",
@@ -1087,7 +1087,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller", "signature"],
     descriptionEn: "Carefully brewed V60 coffee served over ice, highlighting its smooth and distinctive coffee flavours.",
     descriptionAr: "قهوة V60 محضّرة بعناية وتُقدّم مع الثلج، لتستمتع بنكهتها المميزة والناعمة.",
-    image: "/images/cold-coffee/iced-v60-drip-coffee.jpg"
+    image: "./cold-coffee/iced-v60-drip-coffee.jpeg"
   },
   {
     id: "cc-4",
@@ -1102,7 +1102,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller", "signature"],
     descriptionEn: "A creamy iced latte with rich espresso and a smooth, sweet milk flavour.",
     descriptionAr: "لاتيه بارد كريمي مع الإسبريسو الغني ونكهة الحليب الحلوة والناعمة.",
-    image: "/images/cold-coffee/iced-spanish-latte.jpg"
+    image: "./cold-coffee/iced-spanish-latte.jpeg"
   },
   {
     id: "cc-5",
@@ -1117,7 +1117,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller"],
     descriptionEn: "A chilled espresso and milk drink finished with a smooth caramel flavour.",
     descriptionAr: "مشروب بارد من الإسبريسو والحليب، مع نكهة الكراميل الناعمة.",
-    image: "/images/cold-coffee/iced-caramel-macchiato.jpg"
+    image: "./cold-coffee/iced-caramel-macchiato.jpeg"
   },
   {
     id: "cc-6",
@@ -1132,7 +1132,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller", "signature"],
     descriptionEn: "A delicious combination of espresso, chocolate and milk, served chilled over ice.",
     descriptionAr: "مزيج لذيذ من الإسبريسو والشوكولاتة والحليب، يُقدّم بارداً مع الثلج.",
-    image: "/images/cold-coffee/iced-mocha.jpg"
+    image: "./cold-coffee/iced-mocha.jpeg"
   },
   {
     id: "cc-7",
@@ -1147,7 +1147,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A smooth and refreshing iced coffee with a sweet toffee flavour.",
     descriptionAr: "قهوة باردة ناعمة ومنعشة بنكهة التوفي الحلوة.",
-    image: "/images/cold-coffee/iced-toffee.jpg"
+    image: "./cold-coffee/iced-toffee.jpeg"
   },
   {
     id: "cc-8",
@@ -1162,7 +1162,7 @@ export const MENU_ITEMS = [
     tags: ["popular"],
     descriptionEn: "A rich and creamy chocolate drink served cold for a delicious chocolate experience.",
     descriptionAr: "مشروب شوكولاتة غني وكريمي يُقدّم بارداً لتستمتع بمذاق الشوكولاتة اللذيذ.",
-    image: "/images/cold-coffee/iced-chocolate.jpg"
+    image: "./cold-coffee/iced-chocolate.jpeg"
   },
   {
     id: "cc-9",
@@ -1177,7 +1177,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller"],
     descriptionEn: "A chilled mocha with the familiar sweet and rich Snickers-inspired flavour.",
     descriptionAr: "موكا بارد بنكهة سنيكرز الغنية والحلوة.",
-    image: "/images/cold-coffee/iced-mocha-snickers.jpg"
+    image: "./cold-coffee/iced-mocha-snickers.jpeg"
   },
   {
     id: "cc-10",
@@ -1192,7 +1192,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller"],
     descriptionEn: "A creamy iced mocha with a sweet Kinder-inspired chocolate flavour.",
     descriptionAr: "موكا بارد كريمي بنكهة شوكولاتة كيندر الحلوة.",
-    image: "/images/cold-coffee/iced-mocha-kinder.jpg"
+    image: "./cold-coffee/iced-mocha-kinder.jpeg"
   },
   {
     id: "cc-11",
@@ -1207,7 +1207,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A chilled mocha with a rich and sweet Mars-inspired chocolate flavour.",
     descriptionAr: "موكا بارد بنكهة شوكولاتة مارس الغنية والحلوة.",
-    image: "/images/cold-coffee/iced-mocha-mars.jpg"
+    image: "./cold-coffee/iced-mocha-mars.jpeg"
   },
   {
     id: "cc-12",
@@ -1222,7 +1222,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A smooth iced mocha with the distinctive sweet flavour of Lotus.",
     descriptionAr: "موكا بارد ناعم بنكهة لوتس الحلوة والمميزة.",
-    image: "/images/cold-coffee/iced-mocha-lotus.jpg"
+    image: "./cold-coffee/iced-mocha-lotus.jpeg"
   },
   {
     id: "cc-13",
@@ -1237,7 +1237,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller"],
     descriptionEn: "A refreshing iced matcha drink with a smooth and sweet vanilla flavour.",
     descriptionAr: "مشروب ماتشا بارد ومنعش بنكهة الفانيلا الناعمة والحلوة.",
-    image: "/images/cold-coffee/iced-vanilla-matcha.jpg"
+    image: "./cold-coffee/iced-vanilla-matcha.jpeg"
   },
   {
     id: "cc-14",
@@ -1252,7 +1252,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "best_seller"],
     descriptionEn: "A colourful iced matcha with a sweet strawberry flavour and refreshing taste.",
     descriptionAr: "ماتشا باردة بنكهة الفراولة الحلوة وطعم منعش ومميز.",
-    image: "/images/cold-coffee/iced-strawberry-matcha.jpg"
+    image: "./cold-coffee/iced-strawberry-matcha.jpeg"
   },
   {
     id: "cc-15",
@@ -1267,7 +1267,7 @@ export const MENU_ITEMS = [
     tags: ["popular"],
     descriptionEn: "A thick and creamy milkshake with the delicious taste of Oreo cookies.",
     descriptionAr: "ميلك شيك كثيف وكريمي بمذاق بسكويت أوريو اللذيذ.",
-    image: "/images/cold-coffee/oreo-milkshake.jpg"
+    image: "./cold-coffee/oreo-milkshake.jpeg"
   },
   {
     id: "cc-16",
@@ -1282,7 +1282,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A classic iced latte made with espresso and milk for a smooth, balanced taste.",
     descriptionAr: "لاتيه كلاسيكي بارد محضّر بالإسبريسو والحليب بطعم ناعم ومتوازن.",
-    image: "/images/cold-coffee/iced-latte.jpg"
+    image: "./cold-coffee/iced-latte.jpeg"
   },
   {
     id: "cc-17",
@@ -1297,7 +1297,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A refreshing cold cappuccino combining espresso and milk in a smooth coffee drink.",
     descriptionAr: "كابتشينو بارد ومنعش يجمع بين الإسبريسو والحليب بطعم قهوة ناعم.",
-    image: "/images/cold-coffee/iced-cappuccino.jpg"
+    image: "./cold-coffee/iced-cappuccino.jpeg"
   },
   {
     id: "cc-18",
@@ -1312,7 +1312,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A chilled latte with a sweet strawberry flavour and a creamy milk taste.",
     descriptionAr: "لاتيه بارد بنكهة الفراولة الحلوة ومذاق الحليب الكريمي.",
-    image: "/images/cold-coffee/iced-strawberry-latte.jpg"
+    image: "./cold-coffee/iced-strawberry-latte.jpeg"
   },
   {
     id: "cc-19",
@@ -1327,7 +1327,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A creamy iced latte with the distinctive rich flavour of pistachio.",
     descriptionAr: "لاتيه بارد كريمي بنكهة الفستق الغنية والمميزة.",
-    image: "/images/cold-coffee/iced-pistachio-latte.jpg"
+    image: "./cold-coffee/iced-pistachio-latte.jpeg"
   },
   {
     id: "cc-20",
@@ -1342,7 +1342,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A smooth iced latte with a naturally sweet honey flavour.",
     descriptionAr: "لاتيه بارد ناعم بنكهة العسل الحلوة.",
-    image: "/images/cold-coffee/iced-honey-latte.jpg"
+    image: "./cold-coffee/iced-honey-latte.jpeg"
   },
   {
     id: "cc-21",
@@ -1357,7 +1357,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A refreshing Italian-style iced coffee with a rich coffee taste.",
     descriptionAr: "قهوة باردة على الطريقة الإيطالية بطعم قهوة غني ومنعش.",
-    image: "/images/cold-coffee/iced-italian-coffee.jpg"
+    image: "./cold-coffee/iced-italian-coffee.jpeg"
   },
   {
     id: "cc-22",
@@ -1372,7 +1372,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A creamy iced coffee combining espresso, milk and sweet white chocolate flavour.",
     descriptionAr: "قهوة باردة كريمية تجمع بين الإسبريسو والحليب ونكهة الشوكولاتة البيضاء الحلوة.",
-    image: "/images/cold-coffee/iced-white-mocha.jpg"
+    image: "./cold-coffee/iced-white-mocha.jpeg"
   },
   {
     id: "cc-23",
@@ -1387,7 +1387,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A creamy chilled drink with a delicious cookies and cream flavour.",
     descriptionAr: "مشروب بارد وكريمي بنكهة الكوكيز والكريمة اللذيذة.",
-    image: "/images/cold-coffee/iced-cookies-and-cream.jpg"
+    image: "./cold-coffee/iced-cookies-and-cream.jpeg"
   },
   {
     id: "cc-24",
@@ -1402,7 +1402,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A chilled Turkish coffee with a distinctive and traditional coffee flavour.",
     descriptionAr: "قهوة تركية باردة بنكهة القهوة التقليدية والمميزة.",
-    image: "/images/cold-coffee/iced-turkish-coffee.jpg"
+    image: "./cold-coffee/iced-turkish-coffee.jpeg"
   },
   {
     id: "cc-25",
@@ -1417,7 +1417,7 @@ export const MENU_ITEMS = [
     tags: [],
     descriptionEn: "A cold blended coffee drink with a smooth, creamy and refreshing texture.",
     descriptionAr: "مشروب قهوة بارد ومخلوط بقوام كريمي ناعم ومنعش.",
-    image: "/images/cold-coffee/frappuccino.jpg"
+    image: "./cold-coffee/frappuccino.jpeg"
   },
   // ==================== COLD DRINKS & MOJITOS (13 Items) ====================
   {
