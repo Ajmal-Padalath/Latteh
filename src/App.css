@@ -68,7 +68,20 @@
   border: 1px solid var(--cream-border);
   border-radius: var(--radius-md);
   padding: 8px 12px;
-  margin: 10px 16px 0;
+  /* margin: 10px 16px 0; */
+}
+
+.customer-name-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.customer-name-field label {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
 }
 
 .customer-name-input {

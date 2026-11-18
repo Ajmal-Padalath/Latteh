@@ -150,18 +150,24 @@ export default function CartDrawer({
         </div>
 
         {/* Optional Customer Name Input */}
-        {cart.length > 0 && (
+        {/* {cart.length > 0 && (
           <div className="customer-name-bar">
             <User size={15} className="text-muted" />
-            <input 
-              type="text" 
-              placeholder={isAr ? "اسم العميل للنداء عند الاستلام (اختياري)..." : "Your name for order pick-up (optional)..."} 
-              value={customerName}
-              onChange={(e) => setCustomerName(e.target.value)}
-              className="customer-name-input"
-            />
+            <div className="customer-name-field">
+              <label htmlFor="customer-name-input">
+                {isAr ? "اسم العميل (اختياري)" : "Customer name (optional)"}
+              </label>
+              <input
+                id="customer-name-input"
+                type="text"
+                placeholder={isAr ? "أدخل اسمك للنداء عند الاستلام" : "Enter a name for pick-up"}
+                value={customerName}
+                onChange={(e) => setCustomerName(e.target.value)}
+                className="customer-name-input"
+              />
+            </div>
           </div>
-        )}
+        )} */}
 
         {/* Cart Items List */}
         <div className="cart-items-container">
@@ -265,6 +271,24 @@ export default function CartDrawer({
         {cart.length > 0 && (
           <div className="cart-footer">
             <div className="price-summary-box">
+              {cart.length > 0 && (
+                <div className="customer-name-bar">
+                  <User size={15} className="text-muted" />
+                  <div className="customer-name-field">
+                    <label htmlFor="customer-name-input">
+                      {isAr ? "اسم العميل (اختياري)" : "Customer name (optional)"}
+                    </label>
+                    <input
+                      id="customer-name-input"
+                      type="text"
+                      placeholder={isAr ? "أدخل اسمك للنداء عند الاستلام" : "Enter a name for pick-up"}
+                      value={customerName}
+                      onChange={(e) => setCustomerName(e.target.value)}
+                      className="customer-name-input"
+                    />
+                  </div>
+                </div>
+              )}
               <div className="summary-line">
                 <span>{isAr ? "المجموع الفرعي" : "Subtotal"}</span>
                 <span>{formatPrice(subtotal.toFixed(2), lang)} {isAr ? RESTAURANT_INFO.currencyAr : RESTAURANT_INFO.currencyEn}</span>
