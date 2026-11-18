@@ -2112,7 +2112,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Chocolate"],
     descriptionEn: "Chocolate cookies with a rich double-chocolate flavour and a soft, satisfying bite.",
     descriptionAr: "كوكيز بالشوكولاتة بنكهة غنية ومضاعفة، مع قوام طري ولذيذ.",
-    image: "/images/desserts/double-chocolate-cookies.jpg"
+    image: "./desserts/double-chocolate-cookies.jpeg"
   },
   {
     id: "d-2",
@@ -2127,7 +2127,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Vanilla"],
     descriptionEn: "Classic vanilla cookies with a gentle sweetness and a delicious cookie texture.",
     descriptionAr: "كوكيز فانيليا كلاسيكية بحلاوة خفيفة وقوام لذيذ.",
-    image: "/images/desserts/classic-vanilla-cookies.jpg"
+    image: "./desserts/classic-vanilla-cookies.jpeg"
   },
   {
     id: "d-3",
@@ -2142,7 +2142,7 @@ export const MENU_ITEMS = [
     tags: ["Dessert", "Chocolate"],
     descriptionEn: "A smooth and creamy chocolate pudding with a rich chocolate taste.",
     descriptionAr: "بودينغ شوكولاتة ناعم وكريمي بنكهة شوكولاتة غنية.",
-    image: "/images/desserts/chocolate-pudding.jpg"
+    image: "./desserts/chocolate-pudding.jpeg"
   },
   {
     id: "d-4",
@@ -2157,7 +2157,7 @@ export const MENU_ITEMS = [
     tags: ["Ice Cream", "Chocolate"],
     descriptionEn: "A delicious brownie and ice cream dessert combining rich chocolate flavour with a cool, creamy finish.",
     descriptionAr: "حلى لذيذ يجمع بين البراوني الغني بالشوكولاتة والآيس كريم الكريمي البارد.",
-    image: "/images/desserts/brownie-ice-cream-sundae.jpg"
+    image: "./desserts/brownie-ice-cream-sundae.jpeg"
   },
   {
     id: "d-5",
@@ -2172,7 +2172,7 @@ export const MENU_ITEMS = [
     tags: ["Cake", "Chocolate"],
     descriptionEn: "A rich chocolate cake with a soft centre and a delicious chocolate taste.",
     descriptionAr: "كيك شوكولاتة غني بقلب طري ونكهة شوكولاتة لذيذة.",
-    image: "/images/desserts/chocolate-lava-cake.jpg"
+    image: "./desserts/chocolate-lava-cake.jpeg"
   },
   {
     id: "d-6",
@@ -2187,7 +2187,7 @@ export const MENU_ITEMS = [
     tags: ["Dessert", "Tiramisu"],
     descriptionEn: "A classic layered dessert with a smooth, creamy texture and a delicate coffee flavour.",
     descriptionAr: "حلى كلاسيكي بطبقات ناعمة وقوام كريمي مع نكهة قهوة خفيفة.",
-    image: "/images/desserts/classic-tiramisu.jpg"
+    image: "./desserts/classic-tiramisu.jpeg"
   },
   {
     id: "d-7",
@@ -2202,7 +2202,7 @@ export const MENU_ITEMS = [
     tags: ["Cheesecake", "Chocolate"],
     descriptionEn: "A creamy cheesecake dessert with the familiar sweet chocolate flavour of Snickers.",
     descriptionAr: "تشيز كيك كريمي بنكهة سنكرز الحلوة والغنية بالشوكولاتة.",
-    image: "/images/desserts/snickers-cheesecake.jpg"
+    image: "./desserts/snickers-cheesecake.jpeg"
   },
   {
     id: "d-8",
@@ -2217,7 +2217,7 @@ export const MENU_ITEMS = [
     tags: ["Cheesecake", "Cake"],
     descriptionEn: "A rich and creamy San Sebastian cheesecake with a smooth centre and a golden top.",
     descriptionAr: "تشيز كيك سان سباستيان غني وكريمي بقلب ناعم ووجه ذهبي.",
-    image: "/images/desserts/san-sebastian-cheesecake.jpg"
+    image: "./desserts/san-sebastian-cheesecake.jpeg"
   },
   {
     id: "d-9",
@@ -2232,7 +2232,7 @@ export const MENU_ITEMS = [
     tags: ["Waffle", "Dessert"],
     descriptionEn: "A sweet waffle with a golden outside and a soft, fluffy texture.",
     descriptionAr: "وافل حلو بسطح ذهبي وقوام طري وهش.",
-    image: "/images/desserts/sweet-waffle.jpg"
+    image: "./desserts/sweet-waffle.jpeg"
   },
   {
     id: "d-10",
@@ -2247,7 +2247,7 @@ export const MENU_ITEMS = [
     tags: ["Chocolate", "Dessert"],
     descriptionEn: "A rich chocolate dessert with a soft texture and an indulgent chocolate flavour.",
     descriptionAr: "حلى شوكولاتة غني بقوام طري ونكهة شوكولاتة مميزة.",
-    image: "/images/desserts/chocolate-fondant.jpg"
+    image: "./desserts/chocolate-fondant.jpeg"
   },
   {
     id: "d-11",
@@ -2262,7 +2262,7 @@ export const MENU_ITEMS = [
     tags: ["Ice Cream", "Cake"],
     descriptionEn: "A chilled cake dessert combining the soft texture of cake with creamy ice cream.",
     descriptionAr: "كيك بارد يجمع بين قوام الكيك الطري والآيس كريم الكريمي.",
-    image: "/images/desserts/ice-cream-cake.jpg"
+    image: "./desserts/ice-cream-cake.jpeg"
   },
   {
     id: "d-12",
@@ -2277,7 +2277,7 @@ export const MENU_ITEMS = [
     tags: ["Cheesecake", "Strawberry"],
     descriptionEn: "A creamy cheesecake with a sweet and fruity strawberry flavour.",
     descriptionAr: "تشيز كيك كريمي بنكهة الفراولة الحلوة والفواكهية.",
-    image: "/images/desserts/strawberry-cheesecake.jpg"
+    image: "./desserts/strawberry-cheesecake.jpeg"
   },
   {
     id: "d-13",
@@ -2292,7 +2292,7 @@ export const MENU_ITEMS = [
     tags: ["Crepe", "Dessert"],
     descriptionEn: "A soft and thin sweet crepe with a light texture and delicious flavour.",
     descriptionAr: "كريب حلو ورقيق بقوام طري ونكهة لذيذة.",
-    image: "/images/desserts/sweet-crepe.jpg"
+    image: "./desserts/sweet-crepe.jpeg"
   },
   {
     id: "d-14",
@@ -2307,7 +2307,7 @@ export const MENU_ITEMS = [
     tags: ["Cheesecake", "Chocolate"],
     descriptionEn: "A smooth and creamy cheesecake with a rich Galaxy chocolate flavour.",
     descriptionAr: "تشيز كيك ناعم وكريمي بنكهة شوكولاتة جالاكسي الغنية.",
-    image: "/images/desserts/galaxy-cheesecake.jpg"
+    image: "./desserts/galaxy-cheesecake.jpeg"
   },
   {
     id: "d-15",
@@ -2322,7 +2322,7 @@ export const MENU_ITEMS = [
     tags: ["Cheesecake", "Blueberry"],
     descriptionEn: "A creamy cheesecake with a sweet and slightly fruity blueberry flavour.",
     descriptionAr: "تشيز كيك كريمي بنكهة التوت الأزرق الحلوة والفواكهية.",
-    image: "/images/desserts/blueberry-cheesecake.jpg"
+    image: "./desserts/blueberry-cheesecake.jpeg"
   },
   {
     id: "d-16",
@@ -2337,7 +2337,7 @@ export const MENU_ITEMS = [
     tags: ["Pancake", "Dessert"],
     descriptionEn: "Soft and fluffy sweet pancakes with a light, satisfying texture.",
     descriptionAr: "بان كيك حلو وطري بقوام هش وخفيف.",
-    image: "/images/desserts/sweet-pancake.jpg"
+    image: "./desserts/sweet-pancake.jpeg"
   },
   {
     id: "d-17",
@@ -2352,7 +2352,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Chocolate"],
     descriptionEn: "A soft donut with a sweet and rich chocolate flavour.",
     descriptionAr: "دونات طرية بنكهة الشوكولاتة الحلوة والغنية.",
-    image: "/images/desserts/chocolate-donut.jpg"
+    image: "./desserts/chocolate-donut.jpeg"
   },
   {
     id: "d-18",
@@ -2367,7 +2367,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Cupcake"],
     descriptionEn: "A classic soft cupcake with a sweet flavour and light cake texture.",
     descriptionAr: "كب كيك كلاسيكي طري بنكهة حلوة وقوام كيك خفيف.",
-    image: "/images/desserts/classic-cupcake.jpg"
+    image: "./desserts/classic-cupcake.jpeg"
   },
   {
     id: "d-19",
@@ -2382,7 +2382,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Muffin"],
     descriptionEn: "A soft vanilla muffin with a gentle sweetness and a tender texture.",
     descriptionAr: "مافن فانيليا طري بحلاوة خفيفة وقوام ناعم.",
-    image: "/images/desserts/classic-vanilla-muffin.jpg"
+    image: "./desserts/classic-vanilla-muffin.jpeg"
   },
   {
     id: "d-20",
@@ -2397,7 +2397,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Chocolate", "Muffin"],
     descriptionEn: "A soft muffin with a rich double-chocolate flavour.",
     descriptionAr: "مافن طري بنكهة الشوكولاتة الغنية والمضاعفة.",
-    image: "/images/desserts/double-chocolate-muffin.jpg"
+    image: "./desserts/double-chocolate-muffin.jpeg"
   },
   {
     id: "d-21",
@@ -2412,7 +2412,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Croissant"],
     descriptionEn: "A flaky croissant with a delicious cheese filling and a soft centre.",
     descriptionAr: "كرواسون بطبقات هشة وحشوة جبن لذيذة وقلب طري.",
-    image: "/images/desserts/cheese-croissant.jpg"
+    image: "./desserts/cheese-croissant.jpeg"
   },
   {
     id: "d-22",
@@ -2427,7 +2427,7 @@ export const MENU_ITEMS = [
     tags: ["Bakery", "Cake"],
     descriptionEn: "A classic English-style cake with a soft texture and a simple sweet flavour.",
     descriptionAr: "كيك إنجليزي كلاسيكي بقوام طري ونكهة حلوة وبسيطة.",
-    image: "/images/desserts/classic-english-cake.jpg"
+    image: "./desserts/classic-english-cake.jpeg"
   },
   {
     id: "d-23",
@@ -2442,7 +2442,7 @@ export const MENU_ITEMS = [
     tags: ["Snack", "Instant Noodles"],
     descriptionEn: "A warm and familiar instant noodle snack.",
     descriptionAr: "وجبة نودلز سريعة ودافئة بطعم مألوف.",
-    image: "/images/desserts/indomie.jpg"
+    image: "./desserts/indomie.jpeg"
   },
   {
     id: "d-24",
@@ -2457,7 +2457,7 @@ export const MENU_ITEMS = [
     tags: ["Breakfast", "Cereal"],
     descriptionEn: "A light and crunchy cornflake cereal option.",
     descriptionAr: "رقائق ذرة خفيفة ومقرمشة.",
-    image: "/images/desserts/cornflakes.jpg"
+    image: "./desserts/cornflakes.jpeg"
   },
   {
     id: "d-25",
@@ -2472,7 +2472,7 @@ export const MENU_ITEMS = [
     tags: ["Chocolate", "Dessert"],
     descriptionEn: "Delicious chocolate balls for a sweet chocolate treat.",
     descriptionAr: "كرات شوكولاتة لذيذة للاستمتاع بمذاق الشوكولاتة.",
-    image: "/images/desserts/chocolate-balls.jpg"
+    image: "./desserts/chocolate-balls.jpeg"
   }
 ];
 
