@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Trash2, Plus, Minus, Send, CheckCircle2, ShoppingBag, Store, User } from 'lucide-react';
-import { RESTAURANT_INFO } from '../data/menuData';
+import { CUSTOMIZATION_OPTIONS, RESTAURANT_INFO } from '../data/menuData';
 import { formatPrice } from '../utils/formatPrice';
 
 export default function CartDrawer({
@@ -24,36 +24,82 @@ export default function CartDrawer({
 
   // Format WhatsApp Message for Counter Pickup
   const handleWhatsAppOrder = () => {
-    let message = `☕ *طلب جديد - مقهى لاتيه ليستر*\n`;
-    message += `📍 *نوع الطلب:* طلب استلام من الكاونتر (Takeaway)\n`;
-    if (customerName.trim()) {
-      message += `👤 *اسم العميل:* ${customerName.trim()}\n`;
-    }
-    message += `------------------------\n`;
+    const orderNumber = Math.floor(1000 + Math.random() * 9000);
+    const orderSubtotal = cart.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
+    const orderVat = orderSubtotal * 0.15;
+    const orderTotal = orderSubtotal + orderVat;
+    const money = (amount) => `${Number(amount).toFixed(2)} SAR`;
+    const optionLabel = (options, id) => options.find((option) => option.id === id);
+    const lines = [
+      `*☕ LATTEH LEICESTER*`,
+      `🛍️ *طلب جديد | NEW ORDER*`,
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '',
+      '📋 *معلومات الطلب | ORDER INFORMATION*',
+      '',
+      `🔢 رقم الطلب | Order Number: #${orderNumber}`,
+      '',
+      '📦 نوع الطلب | ORDER TYPE',
+      '',
+      'استلام من الكاونتر | TAKEAWAY',
+      ...(customerName.trim() ? ['', `👤 اسم العميل | Customer Name: ${customerName.trim()}`] : []),
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '',
+      '🛒 *تفاصيل الطلب | ORDER DETAILS*',
+      ''
+    ];
 
     cart.forEach((item, index) => {
-      const sizeTag = item.selectedSize
-        ? ` [${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')} / ${item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small')}]`
-        : '';
-      message += `${index + 1}. *${item.nameAr} (${item.nameEn})*${sizeTag} x ${item.quantity} = ${formatPrice(item.totalPrice, lang)} ر.س\n`;
-      const extras = [];
+      lines.push(`${item.nameAr} | ${item.nameEn}`);
       if (item.selectedSize) {
-        extras.push(`الحجم: ${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')}`);
+        lines.push(`الحجم | Size: ${item.sizeLabelAr || (item.selectedSize === 'large' ? 'كبير' : 'صغير')} - ${item.sizeLabelEn || (item.selectedSize === 'large' ? 'Large' : 'Small')}`);
       }
-      if (item.selectedSugar) extras.push(`السكر: ${item.selectedSugar}`);
-      if (item.selectedMilk && item.selectedMilk !== 'full') extras.push(`الحليب: ${item.selectedMilk}`);
-      if (item.selectedIce) extras.push(`الثلج: ${item.selectedIce}`);
-      if (item.selectedAddOns?.length > 0) extras.push(`إضافات: ${item.selectedAddOns.map(a => a.nameAr).join(', ')}`);
-      if (item.specialNotes) extras.push(`ملاحظات: ${item.specialNotes}`);
-      if (extras.length > 0) {
-        message += `   _(${extras.join(' | ')})_\n`;
+      const sugar = optionLabel(CUSTOMIZATION_OPTIONS.sugar, item.selectedSugar);
+      const milk = optionLabel(CUSTOMIZATION_OPTIONS.milk, item.selectedMilk);
+      const ice = optionLabel(CUSTOMIZATION_OPTIONS.ice, item.selectedIce);
+      if (sugar) lines.push(`السكر | Sugar: ${sugar.nameAr} - ${sugar.nameEn}`);
+      if (milk && item.selectedMilk !== 'full') lines.push(`الحليب | Milk: ${milk.nameAr} - ${milk.nameEn}`);
+      if (ice) lines.push(`الثلج | Ice: ${ice.nameAr} - ${ice.nameEn}`);
+      if (item.selectedAddOns?.length) {
+        lines.push('الإضافات | Extras:');
+        item.selectedAddOns.forEach((addon) => lines.push(`• ${addon.nameAr} - ${addon.nameEn}`));
       }
+      if (item.specialNotes) lines.push(`ملاحظات | Notes: ${item.specialNotes}`);
+      lines.push(
+        '',
+        `🔢 الكمية | Quantity: ${item.quantity}`,
+        `💰 السعر | Unit Price: ${money(item.unitPrice)}`,
+        `💵 الإجمالي | Item Total: ${money(item.unitPrice * item.quantity)}`
+      );
+      if (index < cart.length - 1) lines.push('', '━━━━━━━━━━━━━━━━━━', '');
     });
 
-    message += `------------------------\n`;
-    message += `💰 *الإجمالي الكلي:* ${formatPrice(total, lang)} ر.س (شامل الضريبة 15%)\n`;
-    message += `شكراً لكم! ✨`;
-
+    lines.push(
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '',
+      '💰 *ملخص الفاتورة | BILL SUMMARY*',
+      '',
+      `المجموع الفرعي | Subtotal: ${money(orderSubtotal)}`,
+      `ضريبة القيمة المضافة 15% | VAT 15%: ${money(orderVat)}`,
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '',
+      '💵 *الإجمالي النهائي | GRAND TOTAL*',
+      '',
+      money(orderTotal),
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '',
+      '❤️ *شكراً لاختياركم LATTEH LEICESTER*',
+      '',
+      'شكراً لزيارتكم، نتمنى لكم يوماً سعيداً!',
+      '',
+      'Thank you for choosing LATTEH LEICESTER! ❤️'
+    );
+    const message = lines.join('\n');
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${RESTAURANT_INFO.whatsapp}?text=${encoded}`, '_blank');
   };
