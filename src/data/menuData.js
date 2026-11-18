@@ -1387,7 +1387,7 @@ export const MENU_ITEMS = [
     tags: ["popular", "cold_drink"],
     descriptionEn: "Enjoy the refreshing taste of Iced Alfredo, a smooth and chilled specialty drink served cold. Perfect for a refreshing break on a warm day.",
     descriptionAr: "استمتع بمذاق ألفريدو البارد والمنعش، مشروب مميز بقوام ناعم يُقدّم بارداً، مثالي للاستمتاع بالانتعاش في الأيام الحارة.",
-    image: "/images/cold-coffee/iced-alfredo.jpg"
+    image: "./cold-coffee/iced-alfredo.jpeg"
   },
   {
     id: "cc-24",
@@ -2462,17 +2462,17 @@ export const MENU_ITEMS = [
   {
     id: "d-25",
     categoryId: "desserts",
-    nameEn: "Chocolate Bars",
-    nameAr: "ألواح الشوكولاتة",
-    price: 3,
-    calories: 250,
+    nameEn: "Chocolate Balls",
+    nameAr: "كرات الشوكولاتة",
+    price: 6,
+    calories: 116,
     isPopular: false,
     isBestSeller: false,
     isSignature: false,
-    tags: ["Chocolate", "Snack"],
-    descriptionEn: "A sweet chocolate bar for a simple chocolate treat.",
-    descriptionAr: "لوح شوكولاتة حلو للاستمتاع بمذاق الشوكولاتة.",
-    image: "/images/desserts/chocolate-bars.jpg"
+    tags: ["Chocolate", "Dessert"],
+    descriptionEn: "Delicious chocolate balls for a sweet chocolate treat.",
+    descriptionAr: "كرات شوكولاتة لذيذة للاستمتاع بمذاق الشوكولاتة.",
+    image: "/images/desserts/chocolate-balls.jpg"
   }
 ];
 
