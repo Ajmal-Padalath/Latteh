@@ -1377,17 +1377,17 @@ export const MENU_ITEMS = [
   {
     id: "cc-23",
     categoryId: "cold_coffee",
-    nameEn: "Iced Cookies & Cream",
-    nameAr: "كوكيز آند كريم بارد",
-    price: 12,
-    calories: 450,
+    nameEn: "Iced Alfredo",
+    nameAr: "ألفريدو بارد",
+    price: 10,
+    calories: 5,
     isPopular: false,
     isBestSeller: false,
     isSignature: false,
-    tags: [],
-    descriptionEn: "A creamy chilled drink with a delicious cookies and cream flavour.",
-    descriptionAr: "مشروب بارد وكريمي بنكهة الكوكيز والكريمة اللذيذة.",
-    image: "./cold-coffee/iced-cookies-and-cream.jpeg"
+    tags: ["popular", "cold_drink"],
+    descriptionEn: "Enjoy the refreshing taste of Iced Alfredo, a smooth and chilled specialty drink served cold. Perfect for a refreshing break on a warm day.",
+    descriptionAr: "استمتع بمذاق ألفريدو البارد والمنعش، مشروب مميز بقوام ناعم يُقدّم بارداً، مثالي للاستمتاع بالانتعاش في الأيام الحارة.",
+    image: "/images/cold-coffee/iced-alfredo.jpg"
   },
   {
     id: "cc-24",
