@@ -2338,6 +2338,48 @@
   gap: 10px;
 }
 
+.receipt-share-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.receipt-share-wrap > button {
+  width: 100%;
+}
+
+.receipt-share-menu {
+  position: absolute;
+  z-index: 5;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  display: grid;
+  gap: 4px;
+  padding: 6px;
+  border: 1px solid var(--cream-border);
+  border-radius: 14px;
+  background: var(--cream-soft);
+  box-shadow: 0 8px 24px rgba(20, 35, 29, 0.16);
+}
+
+.receipt-share-menu button {
+  padding: 9px 12px;
+  border-radius: 9px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.receipt-share-menu button:hover {
+  background: rgba(14, 59, 46, 0.08);
+}
+
+.receipt-share-message {
+  margin: 8px 0 0;
+  color: var(--primary);
+  text-align: center;
+  font-size: 0.78rem;
+}
+
 .receipt-print-btn {
   flex: 1;
   display: flex;

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import confetti from 'canvas-confetti';
 import { QRCodeSVG } from 'qrcode.react';
-import { CheckCircle, X, Printer, Store, User, Clock } from 'lucide-react';
+import { CheckCircle, X, Share2, Download, Store, User, Clock } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 import { formatPrice } from '../utils/formatPrice';
 
@@ -13,6 +13,9 @@ export default function OrderSuccessModal({
   if (!order) return null;
 
   const isAr = lang === 'ar';
+  const [shareOpen, setShareOpen] = useState(false);
+  const [shareMessage, setShareMessage] = useState('');
+  const qrRef = useRef(null);
 
   useEffect(() => {
     // Launch celebratory confetti burst
@@ -24,8 +27,55 @@ export default function OrderSuccessModal({
     });
   }, []);
 
-  const handlePrint = () => {
-    window.print();
+  const getQrPng = async () => {
+    const svg = qrRef.current?.querySelector('svg');
+    if (!svg) throw new Error('Order QR code is unavailable');
+    const svgUrl = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)], { type: 'image/svg+xml;charset=utf-8' }));
+    try {
+      const image = new Image();
+      image.src = svgUrl;
+      await new Promise((resolve, reject) => { image.onload = resolve; image.onerror = reject; });
+      const canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 660;
+      const context = canvas.getContext('2d');
+      if (!context) throw new Error('Unable to create QR image');
+      context.fillStyle = '#fff';
+      context.fillRect(0, 0, 660, 660);
+      context.drawImage(image, 20, 20, 620, 620);
+      return await new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Unable to export QR image')), 'image/png'));
+    } finally { URL.revokeObjectURL(svgUrl); }
+  };
+
+  const handleDownload = async () => {
+    try {
+      const url = URL.createObjectURL(await getQrPng());
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `latteh-order-${order.orderId}-qr.png`;
+      link.click();
+      URL.revokeObjectURL(url);
+    } catch { setShareMessage(isAr ? 'تعذر تنزيل رمز QR. حاول مرة أخرى.' : 'Could not download the QR code. Please try again.'); }
+  };
+
+  const handleSocialShare = async (service) => {
+    setShareOpen(false);
+    const shareText = `Latteh Leicester order ${order.orderId} - Show this QR code at pickup.`;
+    if (service === 'WhatsApp') {
+      window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    try {
+      const blob = await getQrPng();
+      const file = new File([blob], `latteh-order-${order.orderId}-qr.png`, { type: 'image/png' });
+      if (navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
+        await navigator.share({ title: `Latteh order ${order.orderId}`, text: shareText, files: [file] });
+      } else {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+        setShareMessage(service === 'Instagram'
+          ? (isAr ? 'تم نسخ رمز QR. الصقه في Instagram.' : 'QR copied. Paste it into an Instagram message or story.')
+          : (isAr ? 'تم نسخ رمز QR. الصقه في ShareChat.' : 'QR copied. Paste it into ShareChat.'));
+      }
+    } catch { setShareMessage(isAr ? 'المشاركة غير متاحة. حاول تنزيل رمز QR.' : 'Sharing is unavailable here. Try downloading the QR code.'); }
   };
 
   return (
@@ -98,11 +148,10 @@ export default function OrderSuccessModal({
 
           {/* QR Verification for Barista Screen */}
           <div className="receipt-qr-center">
-            <QRCodeSVG 
-              value={`ORDER:${order.orderId}|NAME:${order.customerName}|TOTAL:${order.total}`}
+            <div ref={qrRef}><QRCodeSVG value={`ORDER:${order.orderId}|NAME:${order.customerName}|TOTAL:${order.total}`}
               size={110}
               fgColor="#0e3b2e"
-            />
+            /></div>
             <span className="qr-receipt-hint">
               {isAr ? "أظهر رقم الطلب أو الرمز للكاشير عند الاستلام" : "Show this order number to the barista upon pick-up"}
             </span>
@@ -111,14 +160,21 @@ export default function OrderSuccessModal({
 
         {/* Action Buttons */}
         <div className="receipt-actions-row">
-          <button className="receipt-print-btn" onClick={handlePrint}>
-            <Printer size={16} />
-            <span>{isAr ? "طباعة الفاتورة" : "Print Receipt"}</span>
-          </button>
-          <button className="receipt-done-btn" onClick={onClose}>
-            <span>{isAr ? "العودة للقائمة" : "Back to Menu"}</span>
+          <div className="receipt-share-wrap">
+            <button className="receipt-print-btn" onClick={() => setShareOpen(value => !value)} aria-expanded={shareOpen}>
+              <Share2 size={16} />
+              <span>Share QR Code</span>
+            </button>
+            {shareOpen && <div className="receipt-share-menu">
+              {['WhatsApp', 'ShareChat', 'Instagram'].map(service => <button key={service} onClick={() => handleSocialShare(service)}>{service}</button>)}
+            </div>}
+          </div>
+          <button className="receipt-done-btn" onClick={handleDownload}>
+            <Download size={16} />
+            <span>Download</span>
           </button>
         </div>
+        {shareMessage && <p className="receipt-share-message" role="status">{shareMessage}</p>}
       </div>
     </div>
   );
