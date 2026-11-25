@@ -27,7 +27,7 @@ export default function CartDrawer({
     const orderNumber = Math.floor(1000 + Math.random() * 9000);
     const orderSubtotal = cart.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
     const orderVat = orderSubtotal * 0.15;
-    const orderTotal = orderSubtotal + orderVat;
+    const orderTotal = orderSubtotal;
     const money = (amount) => `${Number(amount).toFixed(2)} SAR`;
     const optionLabel = (options, id) => options.find((option) => option.id === id);
     const lines = [
