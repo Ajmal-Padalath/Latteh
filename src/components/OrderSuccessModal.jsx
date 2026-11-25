@@ -52,7 +52,7 @@ export default function OrderSuccessModal({
       const link = document.createElement('a');
       link.href = url;
       link.download = `latteh-order-${order.orderId}-qr.png`;
-      link.click();
+      link.click(); 
       URL.revokeObjectURL(url);
     } catch { setShareMessage(isAr ? 'تعذر تنزيل رمز QR. حاول مرة أخرى.' : 'Could not download the QR code. Please try again.'); }
   };
